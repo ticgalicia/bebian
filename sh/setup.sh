@@ -50,7 +50,7 @@ version=3.03.23
 RUTASCRIPT=$(readlink -f $0);
 DIRECTORIO=$(cd "$(dirname "$0")"; pwd -P);
 
-REPOSITORIO="http://51.38.187.16/ticgalicia";
+REPOSITORIO="https://github.com/ticgalicia/bebian/raw/2156bdbb41fdde27ceec85ff5b7c7d9ea2746732/";
 #Descomente la siguiente linea en caso de fallo en la descarga de la nueva actualizacion
 #REPOSITORIO="http://51.38.187.16/ticgalicia";
 
