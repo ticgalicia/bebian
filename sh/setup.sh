@@ -49,7 +49,11 @@ stty cols 132 rows 28
 version=3.03.23
 RUTASCRIPT=$(readlink -f $0);
 DIRECTORIO=$(cd "$(dirname "$0")"; pwd -P);
+
 REPOSITORIO="http://51.38.187.16/ticgalicia";
+#Descomente la siguiente linea en caso de fallo en la descarga de la nueva actualizacion
+#REPOSITORIO="http://51.38.187.16/ticgalicia";
+
 REPUSB="/media/usuario/TICGALICIA/repositorio"
 REPLOCAL="/.repoTIC";
 VSIST=$(cat /etc/debian_version);
