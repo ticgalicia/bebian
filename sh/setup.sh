@@ -46,14 +46,10 @@ echo $1;
 
 ##PARAMETROS DEL SCRIPT:
 stty cols 132 rows 28
-version=3.03.23
+version=2.10.3
 RUTASCRIPT=$(readlink -f $0);
 DIRECTORIO=$(cd "$(dirname "$0")"; pwd -P);
-
-REPOSITORIO="https://github.com/ticgalicia/bebian/raw/2156bdbb41fdde27ceec85ff5b7c7d9ea2746732/";
-#Descomente la siguiente linea en caso de fallo en la descarga de la nueva actualizacion
-#REPOSITORIO="http://51.38.187.16/ticgalicia";
-
+REPOSITORIO="https://raw.githubusercontent.com/ticgalicia/bebian/master";
 REPUSB="/media/usuario/TICGALICIA/repositorio"
 REPLOCAL="/.repoTIC";
 VSIST=$(cat /etc/debian_version);
@@ -175,7 +171,7 @@ echo "             En cualquier momento puedes pulsar Ctrl+c para terminar.${cn}
 		then
 		   	CONECTADO="${cv}RED OK${cn}";
 		else
-			echo "${cr}                   Existe una nueva version del configurador!.${cn}";
+			echo "${ca}            Existe una nueva version del configurador! ($verserv).${cn}";
 			echo "${ca}                       Escribe update para actualizarla.${cn}";
 		fi
 		rm setup.ver
