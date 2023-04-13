@@ -1172,6 +1172,8 @@ then
 	poresto="PermitRootLogin yes";
 	sed -i "s/$esto/$poresto/g" /etc/ssh/sshd_config;
 	apt-get -y install sshpass
+	##Denegar el acceso al usuario usuario en ssh
+	echo "DenyUsers usuario">> /etc/ssh/sshd_config
 else
 	clear
 	echo "${ca}Instalando...${cn}";
@@ -1180,6 +1182,8 @@ else
 	poresto="PermitRootLogin yes";
 	sed -i "s/$esto/$poresto/g" /etc/ssh/sshd_config;
 	apt-get -y install sshpass
+	##Denegar el acceso al usuario usuario en ssh
+	echo "DenyUsers usuario">> /etc/ssh/sshd_config
 fi
 clear
 echo "Modificado e instalado.";
