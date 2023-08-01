@@ -3329,10 +3329,10 @@ then
 	clear
 	echo "${ca}Instalando discord ${cn}";
 	sleep 1
-        wget https://dl.discordapp.net/apps/linux/0.0.27/discord-0.0.27.deb
+        wget https://dl.discordapp.net/apps/linux/0.0.28/discord-0.0.28.deb
 	apt --fix-broken -y install
-	dpkg -i discord-0.0.27.deb	
-	rm discord-0.0.27.deb	
+	dpkg -i discord-0.0.28.deb	
+	rm discord-0.0.28.deb	
 else
 	clear
 	echo "${ca}Instalando discord ${cn}";
