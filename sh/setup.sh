@@ -2120,10 +2120,12 @@ echo "Deseas continuar (S/N)?: \c";
 read continuar;
 if [ "$continuar" = "S" ]
 then
-wget $REPOSITORIO/repository/opera_stable_41_0_2353_46_i386.deb
-apt-get install apt-transport-https
-dpkg -iG opera_stable_41_0_2353_46_i386.deb
-rm opera_stable_41_0_2353_46_i386.deb
+apt-get update
+apt-get install opera-stable
+# wget $REPOSITORIO/repository/opera_stable_41_0_2353_46_i386.deb
+# apt-get install apt-transport-https
+# dpkg -iG opera_stable_41_0_2353_46_i386.deb
+# rm opera_stable_41_0_2353_46_i386.deb
 echo "${ca}Hecho!${cn}";
 else
 echo "No se ha modificado.";
