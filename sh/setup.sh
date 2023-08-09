@@ -2114,30 +2114,11 @@ opcion48="0";
 ##Opcion 51
 51)
 echo "${ca}Instalando...${cn}";
-if [ ! -f $REPUSB/opera/opera_stable_41_0_2353_46_i386.deb ]; then
-echo "Necesita conexion internet";
-echo "Deseas continuar (S/N)?: \c";
-read continuar;
-if [ "$continuar" = "S" ]
-then
-apt-get update
-apt-get install opera-stable
-# wget $REPOSITORIO/repository/opera_stable_41_0_2353_46_i386.deb
-# apt-get install apt-transport-https
-# dpkg -iG opera_stable_41_0_2353_46_i386.deb
-# rm opera_stable_41_0_2353_46_i386.deb
+wget https://deb.opera.com/opera/pool/non-free/o/opera-stable/opera-stable_101.0.4843.33_amd64.deb
+apt-get install apt-transport-https
+dpkg -iG opera-stable_101.0.4843.33_amd64.deb
+rm opera-stable_101.0.4843.33_amd64.deb
 echo "${ca}Hecho!${cn}";
-else
-echo "No se ha modificado.";
-continuar="";
-echo "Pulsa ENTER...";
-read pausa
-fi
-else
-sh $REPUSB/opera/opera_stable_41_0_2353_46_i386.deb
-echo "${ca}Hecho!${cn}";
-opcion51="1";
-fi
 sleep 1
 ;;
 ##Opcion 51
