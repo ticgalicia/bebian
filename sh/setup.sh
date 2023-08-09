@@ -2219,9 +2219,9 @@ echo "${ca}Instalando...${cn}";
 sleep 1
 if [ "$VTIPO" = "x86_64" ]
 then
-	wget http://ftp.es.debian.org/debian/pool/contrib/t/torbrowser-launcher/torbrowser-launcher_0.3.3-3~bpo10+1_amd64.deb
-	dpkg -i torbrowser-launcher_0.3.3-3~bpo10+1_amd64.deb
-	rm torbrowser-launcher_0.3.3-3~bpo10+1_amd64.deb
+	wget http://ftp.es.debian.org/debian/pool/contrib/t/torbrowser-launcher/torbrowser-launcher_0.3.6-2~bpo11+1_amd64.deb
+	dpkg -i torbrowser-launcher_0.3.6-2~bpo11+1_amd64.deb
+	rm torbrowser-launcher_0.3.6-2~bpo11+1_amd64.deb
 	##flatpak install flathub com.github.micahflee.torbrowser-launcher
 	apt-get -y install python3
 	apt --fix-broken install
