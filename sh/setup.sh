@@ -46,7 +46,7 @@ echo $1;
 
 ##PARAMETROS DEL SCRIPT:
 stty cols 132 rows 28
-version=3.08.09
+version=3.09.19
 RUTASCRIPT=$(readlink -f $0);
 DIRECTORIO=$(cd "$(dirname "$0")"; pwd -P);
 REPOSITORIO="https://raw.githubusercontent.com/ticgalicia/bebian/master";
@@ -3312,10 +3312,10 @@ then
 	clear
 	echo "${ca}Instalando discord ${cn}";
 	sleep 1
-        wget https://dl.discordapp.net/apps/linux/0.0.29/discord-0.0.29.deb
+        wget https://dl.dapp.net/apps/linux/0.0.30/discord-0.0.30.deb
 	apt --fix-broken -y install
-	dpkg -i discord-0.0.29.deb	
-	rm discord-0.0.29.deb	
+	dpkg -i discord-0.0.30.deb	
+	rm discord-0.0.30.deb	
 else
 	clear
 	echo "${ca}Instalando discord ${cn}";
