@@ -659,9 +659,9 @@ else
 fi
 if [ "$opcion7a" = "1" ]
 then
-    echo "${cv}    [x]${cn} 7a: Instalar dodo & Thonny o ninja-ide (x32).(Editor Pyton)${cn}";
+    echo "${cv}    [x]${cn} 7a: Instalar dodo & Thonny 4 .(Editor Pyton)${cn}";
 else
-    echo "${cM}    [ ]${cn} 7a: Instalar dodo & Thonny o ninja-ide (x32).(Editor Pyton).";
+    echo "${cM}    [ ]${cn} 7a: Instalar dodo & Thonny 4 .(Editor Pyton).";
 fi
 echo
 echo "${cM}    INTRO: Menu 8 | \c";
@@ -2565,24 +2565,10 @@ then
 	clear
 	echo "${ca}Instalando...${cn}";
 	sleep 1
-
-	if [ ! -f $REPUSB/mblock/mBlock_4.0.4_amd64.deb ]; then
-		clear	    	
-		echo "${cv}      ATENCION: No se encuentra el USB TICGALICIA! (almacen repositorio) ${cn}";
-		sleep 1
-		echo "${cv}      Descargando! ${cn}";
-        	wget http://download.processing.org/processing-3.5.4-linux64.tgz
-		tar -xf processing-3.5.4-linux64.tgz -C /home/usuario/
-
-	else
-		clear
-	    	echo "${cv}      ATENCION: detectado USB TICGALICIA! (almacen repositorio) ${cn}";
-		sleep 1
-		echo "${cv}      Instalando! ${cn}";
-		tar -xf $REPUSB/processing/processing-3.5.4-linux64.tgz -C /home/usuario/
-	fi
- 	chmod 777 -R /home/usuario/processing-3.5.4
-	sh /home/usuario/processing-3.5.4/install.sh
+       	wget http://download.processing.org/processing-4.3-linux-x64.tgz
+	tar -xf processing-4.3-linux-x64.tgz -C /home/usuario/
+ 	chmod 777 -R /home/usuario/processing-4.3
+	sh /home/usuario/processing-4.3/install.sh
 	##rm processing-3.5.4-linux64.tgz
 	echo "${ca}Instalando Python 3.7...${cn} ";
 	apt-get -y install python3.7
@@ -2670,7 +2656,7 @@ then
 	echo "Version=1" >> /home/usuario/Escritorio/MLINK.desktop;
 	echo "Type=Application" >> /home/usuario/Escritorio/MLINK.desktop;
 	echo "Name=MLINK" >> /home/usuario/Escritorio/MLINK.desktop;
-	echo "Comment=Mlink" >> /home/usuario/Escritorio/MLINKmblock.desktop;
+	echo "Comment=Mlink" >> /home/usuario/Escritorio/MLINK.desktop;
 	echo "Exec=mblock-mlink start" >> /home/usuario/Escritorio/MLINK.desktop;
 	echo "Icon=preferences-system-sharing" >> /home/usuario/Escritorio/MLINK.desktop;
 	echo "Path=" >> /home/usuario/Escritorio/MLINK.desktop;
@@ -4802,7 +4788,7 @@ fi
 clear
 echo "${ca}Hecho!${cn}";
 sleep 1
-opcion68="1";
+opcion68b="1";
 ;;
 
 
