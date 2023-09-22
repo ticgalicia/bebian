@@ -573,6 +573,12 @@ then
 else
     echo "${cM}    [ ]${cn} 68: Instalar Simple Screen Recorder.";
 fi
+if [ "$opcion68b" = "1" ]
+then
+    echo "${cv}    [x]${cn} 68b: Instalar vokoscreen.${cn}";
+else
+    echo "${cM}    [ ]${cn} 68b: Instalar vokoscreen.";
+fi
 if [ "$opcion69" = "1" ]
 then
     echo "${cv}    [x]${cn} 69: Instalar Kodi (centro multimedia-tv).${cn}";
@@ -647,9 +653,9 @@ else
 fi
 if [ "$opcion7a" = "1" ]
 then
-    echo "${cv}    [x]${cn} 7a: Instalar Thonny o ninja-ide (x32).(Editor Pyton)${cn}";
+    echo "${cv}    [x]${cn} 7a: Instalar dodo & Thonny o ninja-ide (x32).(Editor Pyton)${cn}";
 else
-    echo "${cM}    [ ]${cn} 7a: Instalar Thonny o ninja-ide (x32).(Editor Pyton).";
+    echo "${cM}    [ ]${cn} 7a: Instalar dodo & Thonny o ninja-ide (x32).(Editor Pyton).";
 fi
 echo
 echo
@@ -2863,6 +2869,11 @@ sleep 1
 
 if [ "$VTIPO" = "x86_64" ]
 then
+echo "${ca}Instalando dodo...${cn}";
+sleep 1
+pip install libreria-dodo
+echo "${ca}Instalando thony...${cn}";
+sleep 1
 apt-get install -y thonny
 else
 apt-get -qq update
@@ -4738,6 +4749,27 @@ echo "${ca}Hecho!${cn}";
 sleep 1
 opcion68="1";
 ;;
+
+##Opcion 68b
+68b)
+if [ "$VTIPO" = "x86_64" ]
+then
+	clear
+	echo "${ca}Instalando...${cn}";
+	sleep 1
+ 	apt install vokoscreen -y
+else
+	clear
+	echo "${ca}Instalando...${cn}";
+	sleep 1
+	apt install vokoscreen -y
+fi
+clear
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion68="1";
+;;
+
 
 ##Opcion kodi
 69)
