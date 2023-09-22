@@ -611,9 +611,9 @@ else
 fi
 if [ "$opcion73" = "1" ]
 then
-    echo "${cv}    [x]${cn} 73: Instalar Processing & Python.${cn}";
+    echo "${cv}    [x]${cn} 73: Instalar Processing 4 & Python.${cn}";
 else
-    echo "${cM}    [ ]${cn} 73: Instalar Processing & Python.";
+    echo "${cM}    [ ]${cn} 73: Instalar Processing 4 & Python.";
 fi
 if [ "$opcion74" = "1" ]
 then
