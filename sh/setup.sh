@@ -390,7 +390,12 @@ then
 else
     echo "${cM}    [ ]${cn} 38: Instalar Freeplane (nuevo freemind)";
 fi
-echo
+if [ "$opcion39" = "1" ]
+then
+    echo "${cv}    [x]${cn} 39: Instalar Autofirma${cn}";
+else
+    echo "${cM}    [ ]${cn} 39: Instalar Autofirma";
+fi
 echo
 echo
 echo
@@ -1947,16 +1952,20 @@ opcion38="0";
 if [ "$VTIPO" = "x86_64" ]
 then
 	clear
-	echo "${ca}Instalando...${cn}";
-	sleep 1
-	apt-get -y install freeplane
+ 	echo "${ca}Instalando...${cn}";
+  	sleep 1
+   	wget --user-agent="Mozilla" https://estaticos.redsara.es/comunes/autofirma/currentversion/AutoFirma_Linux_Debian.zip
+  	apt install openjdk-11-jre -y
+  	unzip AutoFirma_Linux_Debian.zip -d /root/
+   	dpkg -i AutoFirma_1_8_2.deb
+	rm AutoFirma_*
 	apt --fix-broken -y install
 else
 	echo "${ca}No hay soporte para x32${cn}";
 fi
 echo "${ca}Hecho!${cn}";
 sleep 1
-opcion38="1";
+opcion39="1";
 ;;
 
 ##Opcion 41
@@ -3330,7 +3339,8 @@ then
 	echo "${ca}Instalando discord ${cn}";
 	sleep 1
         wget https://dl.discordapp.net/apps/linux/0.0.30/discord-0.0.30.deb
-	apt --fix-broken -y install
+ 	apt autoremove -y
+  	apt --fix-broken -y install
 	dpkg -i discord-0.0.30.deb	
 	rm discord-0.0.30.deb	
 else
