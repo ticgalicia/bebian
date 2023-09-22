@@ -1942,6 +1942,23 @@ sleep 1
 opcion38="0";
 ;;
 
+##Opcion 39
+39)
+if [ "$VTIPO" = "x86_64" ]
+then
+	clear
+	echo "${ca}Instalando...${cn}";
+	sleep 1
+	apt-get -y install freeplane
+	apt --fix-broken -y install
+else
+	echo "${ca}No hay soporte para x32${cn}";
+fi
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion38="1";
+;;
+
 ##Opcion 41
 41)
 echo "${ca}Instalando...${cn}";
@@ -3312,7 +3329,7 @@ then
 	clear
 	echo "${ca}Instalando discord ${cn}";
 	sleep 1
-        wget https://dl.dapp.net/apps/linux/0.0.30/discord-0.0.30.deb
+        wget https://dl.discordapp.net/apps/linux/0.0.30/discord-0.0.30.deb
 	apt --fix-broken -y install
 	dpkg -i discord-0.0.30.deb	
 	rm discord-0.0.30.deb	
