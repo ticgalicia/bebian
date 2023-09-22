@@ -621,6 +621,12 @@ then
 else
     echo "${cM}    [ ]${cn} 74: Instalar mBlock.";
 fi
+if [ "$opcion74b" = "1" ]
+then
+    echo "${cv}    [x]${cn} 74b: Instalar mLink.${cn}";
+else
+    echo "${cM}    [ ]${cn} 74b: Instalar mLink.";
+fi
 if [ "$opcion75" = "1" ]
 then
     echo "${cv}    [x]${cn} 75: Instalar PSeint.${cn}";
@@ -657,7 +663,6 @@ then
 else
     echo "${cM}    [ ]${cn} 7a: Instalar dodo & Thonny o ninja-ide (x32).(Editor Pyton).";
 fi
-echo
 echo
 echo "${cM}    INTRO: Menu 8 | \c";
 fi
@@ -2652,6 +2657,29 @@ fi
 echo "${ca}Hecho!${cn}";
 sleep 1
 opcion74="1";
+;;
+
+##Opcion 74b
+74b)
+if [ "$VTIPO" = "x86_64" ]
+then
+	wget https://dl.makeblock.com/mblock5/linux/mLink-1.2.0-amd64.deb
+	dpkg -i mLink-1.2.0-amd64.deb
+	rm mLink-1.2.0-amd64.deb
+	echo "[Desktop Entry]" > /home/usuario/Escritorio/MLINK.desktop;
+	echo "Version=1" >> /home/usuario/Escritorio/MLINK.desktop;
+	echo "Type=Application" >> /home/usuario/Escritorio/MLINK.desktop;
+	echo "Name=MLINK" >> /home/usuario/Escritorio/MLINK.desktop;
+	echo "Comment=Mlink" >> /home/usuario/Escritorio/MLINKmblock.desktop;
+	echo "Exec=mblock-mlink start" >> /home/usuario/Escritorio/MLINK.desktop;
+	echo "Icon=preferences-system-sharing" >> /home/usuario/Escritorio/MLINK.desktop;
+	echo "Path=" >> /home/usuario/Escritorio/MLINK.desktop;
+	echo "Terminal=true" >> /home/usuario/Escritorio/MLINK.desktop;
+	echo "StartupNotify=false" >> /home/usuario/Escritorio/MLINK.desktop;
+	echo "${ca}Hecho!${cn}";
+fi
+sleep 1
+opcion74b="1";
 ;;
 
 ##Opcion pseint
