@@ -2565,7 +2565,7 @@ then
 	clear
 	echo "${ca}Instalando...${cn}";
 	sleep 1
-       	wget http://download.processing.org/processing-4.3-linux-x64.tgz
+       	wget https://github.com/processing/processing4/releases/download/processing-1293-4.3/processing-4.3-linux-x64.tgz
 	tar -xf processing-4.3-linux-x64.tgz -C /home/usuario/
  	chmod 777 -R /home/usuario/processing-4.3
 	sh /home/usuario/processing-4.3/install.sh
@@ -2662,6 +2662,7 @@ then
 	echo "Path=" >> /home/usuario/Escritorio/MLINK.desktop;
 	echo "Terminal=true" >> /home/usuario/Escritorio/MLINK.desktop;
 	echo "StartupNotify=false" >> /home/usuario/Escritorio/MLINK.desktop;
+ 	chmod 777 /home/usuario/Escritorio/MLINK.desktop
 	echo "${ca}Hecho!${cn}";
 fi
 sleep 1
