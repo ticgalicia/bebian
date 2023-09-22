@@ -2902,7 +2902,13 @@ sleep 1
 pip install libreria-dodo
 echo "${ca}Instalando thony...${cn}";
 sleep 1
-apt-get install -y thonny
+wget https://github.com/thonny/thonny/releases/download/v4.1.2/thonny-4.1.2-x86_64.tar.gz
+tar -zxf thonny-4.1.2-x86_64.tar.gz
+cd thonny/
+sh install
+cd ..
+rm thonn* -R
+##apt-get install -y thonny
 else
 apt-get -qq update
 wget http://ftp.es.debian.org/debian/pool/main/n/ninja-ide/ninja-ide_2.3-2_all.deb
