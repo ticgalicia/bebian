@@ -2904,10 +2904,11 @@ echo "${ca}Instalando thony...${cn}";
 sleep 1
 wget https://github.com/thonny/thonny/releases/download/v4.1.2/thonny-4.1.2-x86_64.tar.gz
 tar -zxf thonny-4.1.2-x86_64.tar.gz
-cd thonny/
-sh install
-cd ..
-rm thonn* -R
+rm thonny-4.1.2-x86_64.tar.gz
+mv thonny /home/usuario/Descargas/
+chmod 777 /home/usuario/Descargas/* -R
+su usuario -c 'python3 /home/usuario/Descargas/thonny/install.py'.
+rm /home/usuario/Descargas/thonn* -R
 ##apt-get install -y thonny
 else
 apt-get -qq update
