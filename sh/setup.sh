@@ -653,9 +653,9 @@ else
 fi
 if [ "$opcion79" = "1" ]
 then
-    echo "${cv}    [x]${cn} 79: Instalar Scratch 2 offline.${cn}";
+    echo "${cv}    [x]${cn} 79: Instalar Scratch 3 offline.${cn}";
 else
-    echo "${cM}    [ ]${cn} 79: Instalar Scratch 2 offline.";
+    echo "${cM}    [ ]${cn} 79: Instalar Scratch 3 offline.";
 fi
 if [ "$opcion7a" = "1" ]
 then
@@ -1304,9 +1304,6 @@ echo "${ca}Hecho!${cn}";
 sleep 1
 opcion10="1";
 ;;
-
-
-
 
 ##Opcion wifi
 wifi)
@@ -2814,45 +2811,8 @@ opcion78="0";
 if [ "$VTIPO" = "x86_64" ]
 then
 	clear
-	echo "${ca}NO DISPONIBLE VERSIONES OFICIALES SUPERIORES A LA 1,4 PARA x64${cn}";
-        echo "${ca}NO SE INSTALARA LA VERSION OFICIAL DISPONIBLE...${cn}";
-        sleep 5
-	echo "${ca}SE INSTALARA LA VERSION ULTIMA DEPENDIENTE DE AIR (RETIRADO)${cn}";
-	sleep 5
-        echo "${ca}INSTALANDO ADOBE AIR (ULTIMA DISPONIBLE)${cn}";
-	apt-get -y install libgtk2.0-0:i386 libstdc++6:i386 libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386 libqt4-qt3support:i386 libgnome-keyring0:i386 libnss-mdns:i386 libnss3:i386
-
-	ln -s /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
-
-	ln -s /usr/lib/i386-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
-echo "${ca}INSTALANDO ADOBE AIR (ULTIMA DISPONIBLE)${cn}";
-
-	wget http://airdownload.adobe.com/air/lin/download/2.6/AdobeAIRSDK.tbz2 
-	mkdir /opt/adobe-air-sdk 
-	tar jxf AdobeAIRSDK.tbz2 -C /opt/adobe-air-sdk
-	wget https://aur.archlinux.org/cgit/aur.git/snapshot/adobe-air.tar.gz 
-	tar xvf adobe-air.tar.gz -C /opt/adobe-air-sdk
-	chmod +x /opt/adobe-air-sdk/adobe-air/adobe-air
-	mkdir /opt/adobe-air-sdk/scratch
-	echo "${ca}INSTALANDO SCRATCH 456.0.1.AIR (ULTIMA DISPONIBLE)${cn}";
-	wget https://scratch.mit.edu/scratchr2/static/sa/Scratch-456.0.1.air
-	cp Scratch-456.0.1.air /opt/adobe-air-sdk/scratch/ 
-	cp Scratch-456.0.1.air /tmp/
-	cd /tmp
-	unzip /tmp/Scratch-456.0.1.air
-	cp /tmp/icons/AppIcon128.png /opt/adobe-air-sdk/scratch/scratch.png
-	cd /root
-
-	echo "[Desktop Entry]" > /usr/share/applications/Scratch2.desktop
-	echo "Name=Scratch2">> /usr/share/applications/Scratch2.desktop
-	echo "Comment=">> /usr/share/applications/Scratch2.desktop
-	echo "Exec=/opt/adobe-air-sdk/adobe-air/adobe-air /opt/adobe-air-sdk/scratch/Scratch-456.0.1.air">> /usr/share/applications/Scratch2.desktop
-	echo "Icon=/opt/adobe-air-sdk/scratch/scratch.png">> /usr/share/applications/Scratch2.desktop
-	echo "Terminal=false">> /usr/share/applications/Scratch2.desktop
-	echo "Type=Application">> /usr/share/applications/Scratch2.desktop
-	echo "Categories=Development;IDE;">> /usr/share/applications/Scratch2.desktop
-
-
+	apt-get -y remove scratch
+ 	apt-get -y install scratch
 	sleep 5
 else
 
