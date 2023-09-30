@@ -6086,8 +6086,12 @@ apt-get -y install supertux
 apt-get -y install xboard
 apt-get -y install ktuberling
 apt-get -y install omnitux
-apt-get -y install tuxpaint
 apt-get -y install tuxtype
+apt-get -y install childsplay
+apt-get -y install gcompris
+apt-get -y install gbrainy
+apt-get -y install blinken
+
 ;;
 
 ##Opcion 88
