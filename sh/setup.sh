@@ -1517,6 +1517,7 @@ opcion16="1";
 
 ##Opcion 25
 25)
+apt-get -y install nautilus
 echo "Creando acceso..";
 sleep 1
 clear;
