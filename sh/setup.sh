@@ -270,6 +270,7 @@ else
 fi
 echo
 echo
+echo
 echo "${cM}    INTRO: Menu 2 | \c";
 ##fin menu1
 fi
@@ -335,6 +336,7 @@ then
 else
     echo "${cM}    [ ]${cn} 28: Geogebra Classic 6.";
 fi
+echo
 echo
 echo
 echo
@@ -404,6 +406,7 @@ fi
 echo
 echo
 echo
+echo
 echo "${cM}    INTRO: Menu 4 | \c";
 fi
 
@@ -455,6 +458,8 @@ then
 else
     echo "${cM}    [ ]${cn} 48: Instalar app Scanner de Red.";
 fi
+echo
+echo
 echo
 echo
 echo
@@ -2566,8 +2571,8 @@ then
 	echo "${ca}Instalando...${cn}";
 	sleep 1
 	wget http://www.arduinoblocks.com/web/site/abconnectordownload/25
- 	dpkg -iG abconnector_v5_2_linux64.deb
-	rm abconnector_v5_2_linux64.deb
+ 	dpkg -iG 25
+	rm 25
 fi
 echo "${ca}Abriendo permisos al puerto serie${cn}";
 sleep 2
