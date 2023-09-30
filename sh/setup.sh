@@ -329,7 +329,12 @@ then
 else
     echo "${cM}    [ ]${cn} 27: Instalar Google Earth.";
 fi
-echo
+if [ "$opcion28" = "1" ]
+then
+    echo "${cv}    [x]${cn} 28: Geogebra Classic 6.${cn}";
+else
+    echo "${cM}    [ ]${cn} 28: Geogebra Classic 6.";
+fi
 echo
 echo
 echo
@@ -1583,10 +1588,8 @@ fi
 clear
 echo "${ca}Hecho!${cn}";
 sleep 1
+opcion26="1";
 ;;
-
-
-
 
 ##Opcion 27
 27)
@@ -1597,6 +1600,7 @@ then
 	sleep 1
 	wget https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
 	dpkg -iG google-earth-pro-stable_current_amd64.deb
+ 	rm google-earth-pro-stable_current_amd64.deb
 	clear
 	echo "${ca}Hecho!${cn}";
 	sleep 1
@@ -1605,6 +1609,30 @@ else
 	echo "${ca}Incluido ya en Bebian32...  ${cn}";
 	sleep 1
 fi
+sleep 1
+opcion27="1";
+;;
+
+##Opcion geogerba
+28)
+if [ "$VTIPO" = "x86_64" ]
+then
+	clear
+	echo "${ca}Descargando...  ${cn}";
+	sleep 1
+	wget http://www.geogebra.net/linux/pool/main/g/geogebra-classic/geogebra-classic_6.0.666.0-202109211234_amd64.deb
+	dpkg -iG geogebra-classic_6.0.666.0-202109211234_amd64.deb
+ 	rm geogebra-classic_6.0.666.0-202109211234_amd64.deb
+	clear
+	echo "${ca}Hecho!${cn}";
+	sleep 1
+else
+	clear
+	echo "${ca}Incluido ya en Bebian32...  ${cn}";
+	sleep 1
+fi
+sleep 1
+opcion28="1";
 ;;
 
 
@@ -6009,6 +6037,7 @@ apt-get -y install supertux
 apt-get -y install xboard
 apt-get -y install ktuberling
 apt-get -y install omnitux
+apt-get -y install tuxpaint
 apt-get -y install tuxtype
 ;;
 
