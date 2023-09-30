@@ -459,7 +459,6 @@ echo
 echo
 echo
 echo
-echo
 echo "${cM}    INTRO: Menu 5 | \c";
 fi
 
@@ -1008,7 +1007,7 @@ fi
 
 ##fin menus
 
-echo "a: Ayuda. | i: Informacion | q: Salir.${cn}";
+echo "a: Ayuda. | i: Informacion | q: Salir | fix: reparar${cn}";
 echo
 
 
@@ -5239,6 +5238,25 @@ echo "${cr}Ya puedes ejecutar de nuevo el script.${cn}";
 fi
 exit
 opcion88="1";
+;;
+
+#Opcion fix
+fix)
+echo "Reparando...";
+sleep 1
+echo "Solucionando problemas DPKG...";
+sleep 1
+dpkg --configure -a
+apt-get clean && sudo apt-get autoclean
+echo "Solucionando problemas de dependencias...";
+sleep 1
+apt-get update --fix-missing
+apt-get install -f
+echo "Borrando paquetes rotos...";
+sleep 1
+apt-get remove
+echo "Listo!";
+sleep 1
 ;;
 
 #Opcion version
