@@ -2596,7 +2596,6 @@ then
 	rm visualino_0.7_amd64.deb
 	echo "${ca}Instalando crumble...${cn}";
 	sleep 1
-	apt -i --fix-broken install
 	wget http://complubot.com/docu/Crumble/Software/crumble_1.2.13_all.deb
         dpkg -iG crumble_1.2.13_all.deb
 	rm crumble_1.2.13_all.deb
@@ -5281,6 +5280,7 @@ dpkg --configure -a
 apt-get clean && sudo apt-get autoclean
 echo "Solucionando problemas de dependencias...";
 sleep 1
+apt --fix-broken -y install
 apt-get update --fix-missing
 apt-get install -f
 echo "Borrando paquetes rotos...";
