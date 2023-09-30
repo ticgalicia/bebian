@@ -2566,7 +2566,7 @@ then
 	tar -xf processing-4.3-linux-x64.tgz -C /home/usuario/
  	chmod 777 -R /home/usuario/processing-4.3
 	sh /home/usuario/processing-4.3/install.sh
-	##rm processing-3.5.4-linux64.tgz
+	rm processing-4.3-linux-x64.tgz
 	echo "${ca}Instalando Python 3.7...${cn} ";
 	apt-get -y install python3.7
 else
@@ -2806,7 +2806,7 @@ sleep 1
 opcion78="0";
 ;;
 
-##Opcion scratch
+##Opcion 79
 79)
 if [ "$VTIPO" = "x86_64" ]
 then
