@@ -2812,7 +2812,9 @@ if [ "$VTIPO" = "x86_64" ]
 then
 	clear
 	apt-get -y remove scratch
- 	apt-get -y install scratch
+ 	wget https://github.com/redshaderobotics/scratch3.0-linux/releases/download/3.3.0/scratch-desktop_3.3.0_amd64.deb
+  	dpkg -y scratch-desktop_3.3.0_amd64.deb
+   	rm scratch-desktop_3.3.0_amd64.deb
 	sleep 5
 else
 
