@@ -607,6 +607,12 @@ then
 else
     echo "${cM}    [ ]${cn} 71: Instalar Arduino.";
 fi
+if [ "$opcion71b" = "1" ]
+then
+    echo "${cv}    [x]${cn} 71b: Instalar Arduinoblocks.${cn}";
+else
+    echo "${cM}    [ ]${cn} 71b: Instalar Arduinoblocks.";
+fi
 if [ "$opcion72" = "1" ]
 then
     echo "${cv}    [x]${cn} 72: Instalar Visualino & Crumble.${cn}";
@@ -2552,6 +2558,25 @@ sleep 1
 opcion71="1";
 ;;
 
+##Opcion arduino
+71b)
+if [ "$VTIPO" = "x86_64" ]
+then
+	clear
+	echo "${ca}Instalando...${cn}";
+	sleep 1
+	wget http://www.arduinoblocks.com/web/site/abconnectordownload/25
+ 	dpkg -iG abconnector_v5_2_linux64.deb
+	rm abconnector_v5_2_linux64.deb
+fi
+echo "${ca}Abriendo permisos al puerto serie${cn}";
+sleep 2
+chmod 777 /dev/ttyUSB0
+usermod -a -G dialout usuario
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion71b="1";
+;;
 
 ##Opcion visualino
 72)
