@@ -5272,21 +5272,22 @@ opcion88="1";
 
 #Opcion fix
 fix)
-echo "Reparando...";
+echo "${cv}Reparando... ${cn}";
 sleep 1
-echo "Solucionando problemas DPKG...";
+echo "${cv}Solucionando problemas DPKG... ${cn}";
 sleep 1
 dpkg --configure -a
 apt-get clean && sudo apt-get autoclean
-echo "Solucionando problemas de dependencias...";
+echo "${cv}Solucionando problemas de dependencias... ${cn}";
 sleep 1
 apt --fix-broken -y install
 apt-get update --fix-missing
 apt-get install -f
-echo "Borrando paquetes rotos...";
+echo "${cv}Borrando paquetes rotos... ${cn}";
 sleep 1
 apt-get remove
-echo "Listo!";
+apt -y autoremove
+echo "${cv}Listo! ${cn}";
 sleep 1
 ;;
 
