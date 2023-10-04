@@ -2596,9 +2596,9 @@ then
 	rm visualino_0.7_amd64.deb
 	echo "${ca}Instalando crumble...${cn}";
 	sleep 1
-	wget http://complubot.com/docu/Crumble/Software/crumble_1.2.13_all.deb
-        dpkg -iG crumble_1.2.13_all.deb
-	rm crumble_1.2.13_all.deb
+	wget http://complubot.com/docu/Crumble/Software/crumble_1.5.8_all.deb
+        dpkg -iG crumble_1.5.8_all.deb
+	rm crumble_1.5.8_all.deb
 else
 	echo "${ca}Instalando...${cn}";
 	sleep 1
