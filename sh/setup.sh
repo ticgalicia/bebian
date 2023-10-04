@@ -2913,7 +2913,7 @@ tar -zxf thonny-4.1.2-x86_64.tar.gz
 rm thonny-4.1.2-x86_64.tar.gz
 mv thonny /home/usuario/Descargas/
 chmod 777 /home/usuario/Descargas/* -R
-su usuario -c 'python3 /home/usuario/Descargas/thonny/install.py'.
+su usuario -c 'python3 /home/usuario/Descargas/thonny/install.py'
 rm /home/usuario/Descargas/thonn* -R
 ##apt-get install -y thonny
 else
