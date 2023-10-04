@@ -2599,6 +2599,7 @@ then
 	wget http://complubot.com/docu/Crumble/Software/crumble_1.5.8_all.deb
         dpkg -iG crumble_1.5.8_all.deb
 	rm crumble_1.5.8_all.deb
+ 	apt --fix-broken -y install
 else
 	echo "${ca}Instalando...${cn}";
 	sleep 1
