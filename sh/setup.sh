@@ -4,7 +4,7 @@
 #
 #		SCRIPT INSTALADOR-CONFIGURADOR PARA DEBIAN
 #			(ultima version x32 y x64)
-#			Fin del proyecto 32 bits
+#	Se convierte en versiones independientes para reducir código
 #
 #	ATENCION:
 #	Esta herramienta es peligrosa, puesto que modifica ficheros
