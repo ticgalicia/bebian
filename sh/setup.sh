@@ -5242,17 +5242,31 @@ fi
 apt-get update
 apt-get -qq -y install curl
 clear
-echo "${cv}Actualizando el configurador... ${cn}";
-sleep 1
+##Actualizando el configurador... 
 cp $RUTASCRIPT $RUTASCRIPT"_"$(date +%F_%H%M%S)
-wget -q $REPOSITORIO/sh/setup.ver
+
+if [ "$VTIPO" = "x86_64" ]
+then
+	wget -q $REPOSITORIO/sh/64/setup.ver
+else
+	wget -q $REPOSITORIO/sh/32/setup.ver
+fi
+
 if [ ! -f setup.ver ]; then
     clear
 	echo "";
 	echo "${cr}                         No hay conexion a internet.${cn}";
 else
     curl $CENTROS
-    wget -q -O $DIRECTORIO/setup.sh $REPOSITORIO/sh/setup.sh
+    	if [ "$VTIPO" = "x86_64" ]
+	then
+ 		echo "${cv}Actualizando el configurador x64... ${cn}";
+		wget -q -O $DIRECTORIO/setup.sh $REPOSITORIO/sh/64/setup.sh
+	else
+ 		echo "${cv}Actualizando el configurador x32... ${cn}";
+		wget -q -O $DIRECTORIO/setup.sh $REPOSITORIO/sh/32/setup.sh
+	fi
+ 	sleep 1
     rm setup.ver
 	if [ ! -f /media/usuario/TICGALICIA/setup.sh ]; then
 	echo "";
