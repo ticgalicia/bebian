@@ -5245,14 +5245,14 @@ clear
 echo "${cv}Actualizando el configurador... ${cn}";
 sleep 1
 cp $RUTASCRIPT $RUTASCRIPT"_"$(date +%F_%H%M%S)
-wget -q $REPOSITORIO/sh/setup.ver
+wget -q $REPOSITORIO/sh/64/setup.ver
 if [ ! -f setup.ver ]; then
     clear
 	echo "";
 	echo "${cr}                         No hay conexion a internet.${cn}";
 else
     curl $CENTROS
-    wget -q -O $DIRECTORIO/setup.sh $REPOSITORIO/sh/setup.sh
+    wget -q -O $DIRECTORIO/setup.sh $REPOSITORIO/sh/64/setup.sh
     rm setup.ver
 	if [ ! -f /media/usuario/TICGALICIA/setup.sh ]; then
 	echo "";
