@@ -46,7 +46,7 @@ echo $1;
 
 ##PARAMETROS DEL SCRIPT:
 stty cols 132 rows 28
-version=3.09.30
+version=3.10.08
 RUTASCRIPT=$(readlink -f $0);
 DIRECTORIO=$(cd "$(dirname "$0")"; pwd -P);
 REPOSITORIO="https://raw.githubusercontent.com/ticgalicia/bebian/master";
@@ -790,9 +790,9 @@ else
 fi
 if [ "$opcion103" = "1" ]
 then
-    echo "${cv}    [x]${cn} 103: Discord.${cn}";
+    echo "${cv}    [x]${cn} 103: d.${cn}";
 else
-    echo "${cM}    [ ]${cn} 103: Discord.";
+    echo "${cM}    [ ]${cn} 103: d.";
 fi
 if [ "$opcion104" = "1" ]
 then
