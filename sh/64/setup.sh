@@ -88,6 +88,7 @@ libver64="7.3.7";
 liburl64="http://ftp.uvigo.es/tdf/libreoffice/stable/";
 libver32="6.2.8.2";
 liburl32="http://downloadarchive.documentfoundation.org/libreoffice/old/"
+discver64="0.0.33";
 
 
 ##borrar leeme escritorio por defecto
@@ -3391,11 +3392,11 @@ then
 	clear
 	echo "${ca}Instalando discord ${cn}";
 	sleep 1
-        wget https://dl.discordapp.net/apps/linux/0.0.33/discord-0.0.33.deb
+        wget https://dl.discordapp.net/apps/linux/"$discver64"/discord-"$discver64".deb
  	apt autoremove -y
   	apt --fix-broken -y install
-	dpkg -i discord-0.0.33.deb	
-	rm discord-0.0.33.deb	
+	dpkg -i discord-"$discver64".deb	
+	rm discord-"$discver64".deb	
 else
 	clear
 	echo "${ca}Instalando discord ${cn}";
