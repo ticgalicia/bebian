@@ -3391,11 +3391,11 @@ then
 	clear
 	echo "${ca}Instalando discord ${cn}";
 	sleep 1
-        wget https://dl.discordapp.net/apps/linux/0.0.32/discord-0.0.32.deb
+        wget https://dl.discordapp.net/apps/linux/0.0.33/discord-0.0.33.deb
  	apt autoremove -y
   	apt --fix-broken -y install
-	dpkg -i discord-0.0.32.deb	
-	rm discord-0.0.32.deb	
+	dpkg -i discord-0.0.33.deb	
+	rm discord-0.0.33.deb	
 else
 	clear
 	echo "${ca}Instalando discord ${cn}";
