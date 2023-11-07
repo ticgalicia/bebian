@@ -5193,6 +5193,7 @@ opcion88="1";
 #Opcion update
 update)
 # Si no se ha actualizado hoy
+
 if [ $DIA != $UDIA ]; then
 	##Reparar iconos
 	if [ -f /home/usuario/Escritorio/compartido.desktop ]; then
