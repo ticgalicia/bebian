@@ -5288,7 +5288,7 @@ else
 	echo "${cr}Ya puedes ejecutar de nuevo el script.${cn}";
 fi
 # Marcando ultimo update
-echo "$DIA">> setup.log;
+echo "$DIA"> setup.log;
 exit
 opcion88="1";
 ;;
