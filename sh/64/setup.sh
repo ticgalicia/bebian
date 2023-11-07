@@ -201,7 +201,7 @@ clear;
 if [ -z "$1" ]
 then
 printf %b ${cF};
-echo $CONECTADO;
+echo $DIA $CONECTADO;
 echo "                       CONFIGURADOR $version para $VTIPO ${cz}";
 echo "${cMS}    MENU $menu ${cn} \c";
 
