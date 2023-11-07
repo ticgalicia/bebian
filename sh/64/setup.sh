@@ -5192,20 +5192,6 @@ opcion88="1";
 
 #Opcion update
 update)
-# Si no se ha actualizado hoy
-
-if [ $DIA != $UDIA ]; then
-	##Reparar iconos
-	if [ -f /home/usuario/Escritorio/compartido.desktop ]; then
-		clear;	
-		echo "${ca}Reparando iconos...${cn}";
-		sleep 1;
-		esto="folder-remote-symbolic";
-		poresto="folder";
-		sed -i "s/$esto/$poresto/g" /home/usuario/Escritorio/compartido.desktop;
-	fi
-fi
-
 
 ##Detectar Discord
 if [ -f /usr/share/applications/discord.desktop ]; then
@@ -5226,26 +5212,40 @@ if [ -f /usr/share/amule/webserver/default/favicon.ico ]; then
 	sleep 1;
 fi
 
+# Si no se ha actualizado hoy
+
+if [ $DIA != $UDIA ]; then
+	##Reparar iconos
+	if [ -f /home/usuario/Escritorio/compartido.desktop ]; then
+		clear;	
+		echo "${ca}Reparando iconos...${cn}";
+		sleep 1;
+		esto="folder-remote-symbolic";
+		poresto="folder";
+		sed -i "s/$esto/$poresto/g" /home/usuario/Escritorio/compartido.desktop;
+	fi
+
+	##Detectar chromium
+	if [ /usr/share/applications/chromium.desktop ]; then
+		echo "${cv}Actualizando chromium... ${cn}";
+		sleep 1
+		apt-get -y install chromium chromium-l10n
+	
+	fi
+
+	##Detectar Chrome
+	if [ -f /usr/share/applications/google-chrome.desktop ]; then
+		echo "${cv}Actualizando chrome... ${cn}";
+		sleep 1
+		wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+		dpkg -i google-chrome-stable_current_amd64.deb
+		rm google-chrome-stable_current_amd64.deb
+	fi
+fi
+
+
 echo "${cv}Actualizando el Sistema espere... ${cn}";
 sleep 1
-
-##Detectar chromium
-if [ /usr/share/applications/chromium.desktop ]; then
-	echo "${cv}Actualizando chromium... ${cn}";
-	sleep 1
-	apt-get -y install chromium chromium-l10n
-
-fi
-
-##Detectar Chrome
-if [ -f /usr/share/applications/google-chrome.desktop ]; then
-	echo "${cv}Actualizando chrome... ${cn}";
-	sleep 1
-	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-	dpkg -i google-chrome-stable_current_amd64.deb
-	rm google-chrome-stable_current_amd64.deb
-fi
-
 if [ ! -f /usr/share/applications/google-chrome.desktop ]; then
 	echo "${ca}Atencion, se agregaran los repositorios oficiales a sources.list${cn}";
 	echo "${ca}Podrian duplicarse las entradas (puedes revisarlas con -sources){cn}";
