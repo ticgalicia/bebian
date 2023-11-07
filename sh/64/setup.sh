@@ -202,7 +202,7 @@ if [ -z "$1" ]
 then
 printf %b ${cF};
 echo "$CONECTADO ";
-echo "$DIA                           CONFIGURADOR $version para $VTIPO ${cz}";
+echo "$DIA                                     CONFIGURADOR $version para $VTIPO ${cz}";
 echo "${cMS}    MENU $menu ${cn} \c";
 
 ##menu1
