@@ -5224,32 +5224,32 @@ sleep 1
 
 ##Detectar chromium
 if [ /usr/share/applications/chromium.desktop ]; then
+	echo "${cv}Actualizando chromium... ${cn}";
+	sleep 1
+	apt-get -y install chromium chromium-l10n
 
-echo "${cv}Actualizando chromium... ${cn}";
-sleep 1
-apt-get -y install chromium chromium-l10n
 fi
 
 ##Detectar Chrome
 if [ -f /usr/share/applications/google-chrome.desktop ]; then
-echo "${cv}Actualizando chrome... ${cn}";
-sleep 1
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-dpkg -i google-chrome-stable_current_amd64.deb
-rm google-chrome-stable_current_amd64.deb
+	echo "${cv}Actualizando chrome... ${cn}";
+	sleep 1
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	dpkg -i google-chrome-stable_current_amd64.deb
+	rm google-chrome-stable_current_amd64.deb
 fi
 
 if [ ! -f /usr/share/applications/google-chrome.desktop ]; then
-echo "${ca}Atencion, se agregaran los repositorios oficiales a sources.list${cn}";
-echo "${ca}Podrian duplicarse las entradas (puedes revisarlas con -sources){cn}";
-sleep 3
-echo "deb http://deb.debian.org/debian buster main contrib non-free">> /etc/apt/sources.list;
-echo "deb-src  http://deb.debian.org/debian buster main contrib non-free">> /etc/apt/sources.list;
-echo "deb http://deb.debian.org/debian buster-updates main contrib non-free">> /etc/apt/sources.list;
-echo "deb-src  http://deb.debian.org/debian buster-updates main contrib non-free">> /etc/apt/sources.list;
-echo "deb http://security.debian.org/ buster/updates main contrib non-free">> /etc/apt/sources.list;
-echo "deb-src http://security.debian.org/ buster/updates main contrib non-free">> /etc/apt/sources.list;
-echo "${ca}Hecho!${cn}";
+	echo "${ca}Atencion, se agregaran los repositorios oficiales a sources.list${cn}";
+	echo "${ca}Podrian duplicarse las entradas (puedes revisarlas con -sources){cn}";
+	sleep 3
+	echo "deb http://deb.debian.org/debian buster main contrib non-free">> /etc/apt/sources.list;
+	echo "deb-src  http://deb.debian.org/debian buster main contrib non-free">> /etc/apt/sources.list;
+	echo "deb http://deb.debian.org/debian buster-updates main contrib non-free">> /etc/apt/sources.list;
+	echo "deb-src  http://deb.debian.org/debian buster-updates main contrib non-free">> /etc/apt/sources.list;
+	echo "deb http://security.debian.org/ buster/updates main contrib non-free">> /etc/apt/sources.list;
+	echo "deb-src http://security.debian.org/ buster/updates main contrib non-free">> /etc/apt/sources.list;
+	echo "${ca}Hecho!${cn}";
 fi
 
 apt-get update
@@ -5259,6 +5259,7 @@ echo "${cv}Actualizando el configurador... ${cn}";
 sleep 1
 cp $RUTASCRIPT $RUTASCRIPT"_"$(date +%F_%H%M%S)
 wget -q $REPOSITORIO/sh/64/setup.ver
+
 if [ ! -f setup.ver ]; then
     clear
 	echo "";
@@ -5276,9 +5277,9 @@ else
 	echo "";
 	echo "";
 	fi
-    clear
-echo "${cv}Actualizado! ${cn}";
-echo "${cr}Ya puedes ejecutar de nuevo el script.${cn}";
+    	clear
+	echo "${cv}Actualizado! ${cn}";
+	echo "${cr}Ya puedes ejecutar de nuevo el script.${cn}";
 fi
 exit
 opcion88="1";
