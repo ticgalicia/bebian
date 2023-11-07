@@ -1403,24 +1403,26 @@ opcion88="1";
 ssh)
 echo "Pass ROOT: \c";
 read passroot
-echo "IP MODELO xx.xx.xx \c";
+echo "IP MODELO xx.xx.xx : \c";
 read ipm
-echo "IP INICIAL \c";
+echo "IP INICIAL : \c";
 read ipini
-echo "IP FINAL \c";
+echo "IP FINAL : \c";
 read ipfin
 echo "COMANDO: \c";
 read comandossh
 while [ $ipini -le $ipfin ]; do
-    echo  "$ipini"
-    sshpass -p $passroot ssh root@$ipm.$ipini $comandossh
-    ##notify-send Hola $ipini
-    sleep 1
-    ipini=$(( ipini + 1 ))
-    clear;
-    sleep 1
+	clear;	
+	echo "${ca}$ipini${cn}";
+	sleep 1;
+	##echo  "$ipini"
+	sshpass -p $passroot ssh root@$ipm.$ipini $comandossh
+	##notify-send Hola $ipini
+	sleep 1
+	ipini=$(( ipini + 1 ))
+	clear;
+	sleep 1
 done
-
 ;;
 
 
