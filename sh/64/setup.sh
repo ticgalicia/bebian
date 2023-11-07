@@ -143,7 +143,7 @@ clear
 		sleep 2;
 	fi
 
-echo "                                                        $DIA ";
+echo "                                             Ultima update: $UDIA ";
 echo "                       CONFIGURADOR $version para $VTIPO ${cz}";
 echo "         ===========================================================";
 echo "         =      ====        ==      ====    =====  =====  =======  =";
