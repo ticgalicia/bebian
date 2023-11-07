@@ -5188,6 +5188,13 @@ opcion88="1";
 
 #Opcion update
 update)
+##Reparar iconos
+if [ -f /home/usuario/escritorio/compartido.desktop ]; then
+esto="folder-remote-symbolic";
+poresto="folder";
+sed -i "s/$esto/$poresto/g" /home/usuario/escritorio/compartido.desktop;
+fi
+
 ##Detectar Discord
 if [ -f /usr/share/applications/discord.desktop ]; then
 	clear;	
