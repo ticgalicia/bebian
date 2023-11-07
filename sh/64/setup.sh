@@ -59,7 +59,7 @@ ippc=$(ip addr | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*
 macpc=$(ip -o link | grep ether | awk '{ print $17 }');
 CENTROS="http://51.38.187.16/ticgalicia/centros.php?e=$hostn&i=$ippc&m=$macpc&v=$VSIST";
 DIA=`date +"%d/%m/%Y"`;
-echo "$DIA">> setup.log;
+UDIA=$( cat setup.log );
 ##colores
 
 ###ACTIVAR TECLADO NUMERICO POR DEFECTO
@@ -143,7 +143,7 @@ clear
 		sleep 2;
 	fi
 
-echo
+echo "                                                        $DIA ";
 echo "                       CONFIGURADOR $version para $VTIPO ${cz}";
 echo "         ===========================================================";
 echo "         =      ====        ==      ====    =====  =====  =======  =";
@@ -5192,15 +5192,19 @@ opcion88="1";
 
 #Opcion update
 update)
-##Reparar iconos
-if [ -f /home/usuario/Escritorio/compartido.desktop ]; then
-	clear;	
-	echo "${ca}Reparando iconos...${cn}";
-	sleep 1;
-	esto="folder-remote-symbolic";
-	poresto="folder";
-	sed -i "s/$esto/$poresto/g" /home/usuario/Escritorio/compartido.desktop;
+# Si no se ha actualizado hoy
+if [ $DIA -ne $UDIA ]; then
+	##Reparar iconos
+	if [ -f /home/usuario/Escritorio/compartido.desktop ]; then
+		clear;	
+		echo "${ca}Reparando iconos...${cn}";
+		sleep 1;
+		esto="folder-remote-symbolic";
+		poresto="folder";
+		sed -i "s/$esto/$poresto/g" /home/usuario/Escritorio/compartido.desktop;
+	fi
 fi
+
 
 ##Detectar Discord
 if [ -f /usr/share/applications/discord.desktop ]; then
@@ -5283,6 +5287,8 @@ else
 	echo "${cv}Actualizado! ${cn}";
 	echo "${cr}Ya puedes ejecutar de nuevo el script.${cn}";
 fi
+# Marcando ultimo update
+echo "$DIA">> setup.log;
 exit
 opcion88="1";
 ;;
