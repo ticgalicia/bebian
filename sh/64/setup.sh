@@ -58,7 +58,7 @@ hostn=$(cat /etc/hostname);
 ippc=$(ip addr | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p');
 macpc=$(ip -o link | grep ether | awk '{ print $17 }');
 CENTROS="http://51.38.187.16/ticgalicia/centros.php?e=$hostn&i=$ippc&m=$macpc&v=$VSIST";
-DIA=`date +"%d/%m/%Y"`;
+DIA=`date +"%d%m%Y"`;
 UDIA=$( cat setup.log );
 ##colores
 
@@ -5193,7 +5193,7 @@ opcion88="1";
 #Opcion update
 update)
 # Si no se ha actualizado hoy
-if [ "$DIA" != "$UDIA" ]; then
+if [ $DIA -en $UDIA ]; then
 	##Reparar iconos
 	if [ -f /home/usuario/Escritorio/compartido.desktop ]; then
 		clear;	
