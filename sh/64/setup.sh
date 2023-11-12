@@ -90,7 +90,7 @@ libver64="7.3.7";
 liburl64="http://ftp.uvigo.es/tdf/libreoffice/stable/";
 libver32="6.2.8.2";
 liburl32="http://downloadarchive.documentfoundation.org/libreoffice/old/"
-discver64="0.0.33";
+discver64="0.0.34";
 
 
 ##borrar leeme escritorio por defecto
@@ -3403,15 +3403,8 @@ then
 	rm discord-"$discver64".deb	
 else
 	clear
-	echo "${ca}Instalando discord ${cn}";
-	echo "${ca}Este proceso no ha sido probado en 32 bits!!!!)${cn}";
+	echo "${ca}No hay soporte ${cn}";
 	sleep 4
-	#wget https://dl-canary.discordapp.net/apps/linux/0.0.105/discord-canary-0.0.105.deb
-        wget https://dl.discordapp.net/apps/linux/0.0.10/discord-0.0.10.deb
-	apt --fix-broken -y install
-	#rm discord-canary-0.0.105.deb
-	dpkg -i discord-0.0.10.deb	
-	rm discord-0.0.10.deb	
 fi
 clear
 echo "${ca}Hecho!${cn}";
