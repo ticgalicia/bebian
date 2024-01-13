@@ -528,6 +528,7 @@ echo
 echo
 echo
 echo
+echo
 echo "${cM}    INTRO: Menu 6 | \c";
 fi
 
@@ -718,6 +719,7 @@ echo
 echo
 echo
 echo
+echo
 echo "${cM}    INTRO: Menu 9 | \c";
 fi
 
@@ -763,6 +765,7 @@ then
 else
     echo "${cM}    [ ]${cn} 96: Qelectrotech diseño Industrial Electricidad,Neumatica,...";
 fi
+echo
 echo
 echo
 echo
@@ -833,6 +836,7 @@ then
 else
     echo "${cM}    [ ]${cn} 109: Cliente Emule";
 fi
+echo
 echo
 echo
 echo
