@@ -144,7 +144,7 @@ clear
 	fi
 
 echo "                                             Ultima update: $UDIA ";
-echo "                       CONFIGURADOR $version para $VTIPO ${cz}";
+echo "                     CONFIGURADOR $version para $VTIPO ${cz}";
 echo "         ===========================================================";
 echo "         =      ====        ==      ====    =====  =====  =======  =";
 echo "         =  ===  ===  ========  ===  ====  =====    ====   ======  =";
