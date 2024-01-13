@@ -793,9 +793,9 @@ else
 fi
 if [ "$opcion103" = "1" ]
 then
-    echo "${cv}    [x]${cn} 103: d.${cn}";
+    echo "${cv}    [x]${cn} 103: Discord.${cn}";
 else
-    echo "${cM}    [ ]${cn} 103: d.";
+    echo "${cM}    [ ]${cn} 103: Discord.";
 fi
 if [ "$opcion104" = "1" ]
 then
