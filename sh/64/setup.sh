@@ -46,7 +46,7 @@ echo $1;
 
 ##PARAMETROS DEL SCRIPT:
 stty cols 132 rows 28
-version=3.10.08
+version=3.13.01
 RUTASCRIPT=$(readlink -f $0);
 DIRECTORIO=$(cd "$(dirname "$0")"; pwd -P);
 REPOSITORIO="https://raw.githubusercontent.com/ticgalicia/bebian/master";
@@ -90,7 +90,7 @@ libver64="7.3.7";
 liburl64="http://ftp.uvigo.es/tdf/libreoffice/stable/";
 libver32="6.2.8.2";
 liburl32="http://downloadarchive.documentfoundation.org/libreoffice/old/"
-discver64="0.0.34";
+discver64="0.0.40";
 
 
 ##borrar leeme escritorio por defecto
