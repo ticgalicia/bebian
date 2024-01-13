@@ -49,7 +49,7 @@ stty cols 132 rows 28
 version=3.13.01
 RUTASCRIPT=$(readlink -f $0);
 DIRECTORIO=$(cd "$(dirname "$0")"; pwd -P);
-REPOSITORIO="https://raw.githubusercontent.com/ticgalicia/bebian/master/64";
+REPOSITORIO="https://raw.githubusercontent.com/ticgalicia/bebian/master";
 REPUSB="/media/usuario/TICGALICIA/repositorio"
 REPLOCAL="/.repoTIC";
 VSIST=$(cat /etc/debian_version);
@@ -129,7 +129,7 @@ if [ -z "$1" ]
 then
 
 ##Verificar version en servidor
-wget $REPOSITORIO/sh/setup.ver
+wget $REPOSITORIO/sh/64/setup.ver
 verserv=$( cat setup.ver )
 clear
 	if [ ! -f /media/usuario/TICGALICIA/setup.sh ]; then
