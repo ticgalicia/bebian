@@ -2,7 +2,7 @@
 # -*- ENCODING: utf-8 -*-
 ##########################################################################
 #
-#		SCRIPT INSTALADOR-CONFIGURADOR PARA DEBIAN (VERSION FINAL 32)
+#		SCRIPT INSTALADOR-CONFIGURADOR PARA DEBIAN (VERSION 64)
 #
 #	ATENCION:
 #	Esta herramienta es peligrosa, puesto que modifica ficheros
