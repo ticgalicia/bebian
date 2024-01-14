@@ -46,7 +46,7 @@ echo $1;
 
 ##PARAMETROS DEL SCRIPT:
 stty cols 132 rows 28
-version=3.13.02.24
+version=3.14.01.24
 RUTASCRIPT=$(readlink -f $0);
 DIRECTORIO=$(cd "$(dirname "$0")"; pwd -P);
 REPOSITORIO="https://raw.githubusercontent.com/ticgalicia/bebian/master";
@@ -202,7 +202,7 @@ if [ -z "$1" ]
 then
 printf %b ${cF};
 echo "$CONECTADO ";
-echo "$DIA                                     CONFIGURADOR $version para $VTIPO ${cz}";
+echo "$DIA                                 CONFIGURADOR $version para $VTIPO ${cz}";
 echo "${cMS}    MENU $menu ${cn} \c";
 
 ##menu1
