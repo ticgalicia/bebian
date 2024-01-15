@@ -86,7 +86,7 @@ cF='\e]11;#1000d6\a';
 
 ##PARAMETROS DE DESCARGAS
 #LIBREOFFICE
-libver64="7.3.7";
+libver64="7.6.4";
 liburl64="http://ftp.uvigo.es/tdf/libreoffice/stable/";
 libver32="6.2.8.2";
 liburl32="http://downloadarchive.documentfoundation.org/libreoffice/old/"
