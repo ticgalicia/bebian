@@ -5243,19 +5243,6 @@ fi
 
 echo "${cv}Actualizando el Sistema espere... ${cn}";
 sleep 1
-if [ ! -f /usr/share/applications/google-chrome.desktop ]; then
-	echo "${ca}Atencion, se agregaran los repositorios oficiales a sources.list${cn}";
-	echo "${ca}Podrian duplicarse las entradas (puedes revisarlas con -sources){cn}";
-	sleep 3
-	echo "deb http://deb.debian.org/debian buster main contrib non-free">> /etc/apt/sources.list;
-	echo "deb-src  http://deb.debian.org/debian buster main contrib non-free">> /etc/apt/sources.list;
-	echo "deb http://deb.debian.org/debian buster-updates main contrib non-free">> /etc/apt/sources.list;
-	echo "deb-src  http://deb.debian.org/debian buster-updates main contrib non-free">> /etc/apt/sources.list;
-	echo "deb http://security.debian.org/ buster/updates main contrib non-free">> /etc/apt/sources.list;
-	echo "deb-src http://security.debian.org/ buster/updates main contrib non-free">> /etc/apt/sources.list;
-	echo "${ca}Hecho!${cn}";
-fi
-
 apt-get update
 apt-get -qq -y install curl
 clear
