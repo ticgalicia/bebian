@@ -185,7 +185,7 @@ sleep 1;
 	fi
 echo
 echo "\c";
-sleep 3;
+sleep 4;
 
 #liberar cache
 apt-get autoclean
