@@ -5256,7 +5256,7 @@ if [ ! -f setup.ver ]; then
 	echo "";
 	echo "${cr}                         No hay conexion a internet.${cn}";
 else
-    curl $CENTROS
+    curl --silent $CENTROS
     wget -q -O $DIRECTORIO/setup.sh $REPOSITORIO/sh/64/setup.sh
     rm setup.ver
 	if [ ! -f /media/usuario/TICGALICIA/setup.sh ]; then
@@ -5272,8 +5272,9 @@ else
 	echo "${cv}Actualizado! ${cn}";
 	echo "${cr}Ya puedes ejecutar de nuevo el script.${cn}";
 fi
+clear
 echo "${cv}La opcion para actualizar el Mozilla Firefox es 56... ${cn}";
-sleep 1
+sleep 2
 # Marcando ultimo update
 echo "$DIA"> setup.log;
 exit
