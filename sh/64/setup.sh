@@ -153,7 +153,7 @@ echo " ██████╔╝███████╗██████╔╝�
 echo " ╚═════╝ ╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝      ╚═╝ ";
 echo "${cn}";  
 echo
-echo "                   Preconfiguracion y adaptacion del equipo.";
+echo "                 Script de preconfiguracion y adaptacion del equipo.";
 echo "     ${cr}Los procesos no se pueden detener y pueden desconfigurar el sistema.";
 echo "               Cierra ahora esta ventana si no sabes como funciona.";
 echo "             En cualquier momento puedes pulsar Ctrl+c para terminar.${cn}";
