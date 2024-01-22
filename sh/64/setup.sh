@@ -2317,7 +2317,7 @@ opcion55="0";
 if [ "$VTIPO" = "x86_64" ]
 then
 	clear
-	echo "${ca}Instalando...${cn}";
+	echo "${ca}Instalando firefox-esr...${cn}";
 	sleep 1
 	clear
 	apt-get install -f
@@ -5091,7 +5091,6 @@ apt-get -y install lumi
 
 apt-get -y install kodi
 apt-get -y install kdenlive
-apt-get -y install arduino
 apt-get -y install openshot
 apt-get -y install freemind
 apt-get -y install evince
@@ -5129,14 +5128,13 @@ apt-get -y install pdfshuffler
 
 ## DESARROLLO
 apt-get -y install bluefish
-
+apt-get -y install arduino
 apt-get -y install scratch
 apt-get -y install glade
 apt-get -y install geany
 
 ## INTERNET
 apt-get -y install icedove
-apt-get -f install
 apt-get -f install chromium chromium-l10n
 
 ## EDUCACION
@@ -5189,7 +5187,7 @@ opcion88="1";
 
 #Opcion update
 update)
-
+echo "Ultima update realizada el $UDIA ";
 ##Detectar Discord
 if [ -f /usr/share/applications/discord.desktop ]; then
 	clear;	
@@ -5272,6 +5270,8 @@ else
 	echo "${cv}Actualizado! ${cn}";
 	echo "${cr}Ya puedes ejecutar de nuevo el script.${cn}";
 fi
+echo "${cv}La opcion para actualizar el Mozilla Firefox es 56... ${cn}";
+sleep 1
 # Marcando ultimo update
 echo "$DIA"> setup.log;
 exit
