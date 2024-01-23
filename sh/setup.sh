@@ -128,7 +128,12 @@ if [ -z "$1" ]
 then
 
 ##Verificar version en servidor
-wget $REPOSITORIO/sh/setup.ver
+if [ "$VTIPO" = "x86_64" ]
+then
+	wget -q $REPOSITORIO/sh/64/setup.ver
+else
+	wget -q $REPOSITORIO/sh/32/setup.ver
+fi
 verserv=$( cat setup.ver )
 clear
 	if [ ! -f /media/usuario/TICGALICIA/setup.sh ]; then
