@@ -5254,9 +5254,9 @@ cp $RUTASCRIPT $RUTASCRIPT"_"$(date +%F_%H%M%S)
 
 if [ "$VTIPO" = "x86_64" ]
 then
-	wget -q $REPOSITORIO/sh/64/setup.ver
+	wget -q $REPOSITORIO/sh/64/setup.sh
 else
-	wget -q $REPOSITORIO/sh/32/setup.ver
+	wget -q $REPOSITORIO/sh/32/setup.sh
 fi
 
 if [ ! -f setup.ver ]; then
