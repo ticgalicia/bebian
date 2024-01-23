@@ -5251,12 +5251,12 @@ apt-get -qq -y install curl
 clear
 ##Actualizando el configurador... 
 cp $RUTASCRIPT $RUTASCRIPT"_"$(date +%F_%H%M%S)
-
+#verificamos version servidor
 if [ "$VTIPO" = "x86_64" ]
 then
-	wget -q $REPOSITORIO/sh/64/setup.sh
+	wget -q $REPOSITORIO/sh/64/setup.ver
 else
-	wget -q $REPOSITORIO/sh/32/setup.sh
+	wget -q $REPOSITORIO/sh/32/setup.ver
 fi
 
 if [ ! -f setup.ver ]; then
