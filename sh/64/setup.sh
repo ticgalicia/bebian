@@ -470,9 +470,9 @@ else
 fi
 if [ "$opcion49" = "1" ]
 then
-    echo "${cv}    [x]${cn} 49: Instalar UnRAR (descompresor).${cn}";
+    echo "${cv}    [x]${cn} 49: Instalar MEGA download.${cn}";
 else
-    echo "${cM}    [ ]${cn} 49: Instalar UnRAR (descompresor).";
+    echo "${cM}    [ ]${cn} 49: Instalar MEGA download.";
 fi
 echo
 echo
@@ -2211,17 +2211,12 @@ opcion48="0";
 
 ##Opcion 49
 49)
-sudo apt-get install unrar
+wget https://mega.nz/linux/repo/Debian_12/amd64/megacmd-Debian_12_amd64.deb 
+apt -y install "megacmd-Debian_12_amd64.deb"
+rm megacmd-Debian_12_amd64.deb
 echo "${ca}Hecho!${cn}";
 sleep 1
 opcion49="1";
-;;
-##Opcion -49
--49)
-sudo apt-get remove unrar
-echo "${ca}Hecho!${cn}";
-sleep 1
-opcion49="0";
 ;;
 
 ##Opcion 51
@@ -3371,10 +3366,12 @@ clear
 echo "Agradecimiento a José Ángel Araújo (CIFP FONTECARMOA) por la iniciativa de incluirlo."
 sleep 2
 dpkg --add-architecture i386
-apt-get -y install unrar
+wget https://mega.nz/linux/repo/Debian_12/amd64/megacmd-Debian_12_amd64.deb 
+apt -y install "megacmd-Debian_12_amd64.deb"
+rm megacmd-Debian_12_amd64.deb
 apt-get update
 apt-get install wine32
-wget https://mega.nz/file/JKZlEbiL#3P0gn70l6x80nS8Qob9uq9h04nLIP3EbMz0xZwKPQ3I
+mega-get https://mega.nz/file/JKZlEbiL#3P0gn70l6x80nS8Qob9uq9h04nLIP3EbMz0xZwKPQ3I
 unrar x CADe_SIMU V4.2.rar /home/usuario/CADe_SIMU_V4.2/
 echo "[Desktop Entry]" > /home/usuario/Escritorio/CAEeSIMU.desktop;
 echo "Version=3" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
