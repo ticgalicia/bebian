@@ -3363,6 +3363,11 @@ opcion96="1";
 ;;
 
 97)
+clear
+echo "Nuestro agradecimiento al credor de la aplicación por ceder su incorportación a la maqueta."
+echo "https://cade-simu.com/"
+echo "Agradecimiento a José Ángel Araújo (CIFP FONTECARMOA) por la iniciativa de incluirlo."
+sleep 1
 dpkg --add-architecture i386
 apt-get -y install unrar
 apt-get update
