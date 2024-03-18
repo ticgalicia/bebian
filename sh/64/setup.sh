@@ -3395,6 +3395,7 @@ echo "Path=/home/usuario/wine/CADe_SIMU/" >> /home/usuario/Escritorio/CADe_SIMU.
 echo "Terminal=false" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
 echo "StartupNotify=false" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
 chmod 777 /home/usuario/wine/ -R
+chmod 777 /home/usuario/Escritorio/CADe_SIMU.desktop;
 echo "${ca}Hecho!${cn}";
 sleep 1
 opcion97="1";
