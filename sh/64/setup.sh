@@ -3381,20 +3381,20 @@ apt-get remove
 apt -y autoremove
 apt-get update
 apt-get install wine32
-md /home/usuario/wine/
-md /home/usuario/wine/CADeSIMU/
+mkdir /home/usuario/wine/
+mkdir /home/usuario/wine/CADeSIMU/
 mega-get https://mega.nz/folder/hBgSTKiD#ISyC9foVGxhAayb-wKYmBQ /home/usuario/wine/CADeSIMU/
-unrar x CADe_SIMU V4.2.rar /home/usuario/CADe_SIMU_V4.2/
-echo "[Desktop Entry]" > /home/usuario/Escritorio/CAEeSIMU.desktop;
-echo "Version=3" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
-echo "Type=Application" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
-echo "Name=CAEeSIMU" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
-echo "Comment=CAEeSIMU" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
-echo "Exec= wine /home/usuario/CADe_SIMU_V4.2/CADe_SIMU_V4.2.exe" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
-echo "Icon=accessories-text-editor" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
-echo "Path=/home/usuario/CADe_SIMU_V4.2/" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
-echo "Terminal=false" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
-echo "StartupNotify=false" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
+
+echo "[Desktop Entry]" > /home/usuario/Escritorio/CADeSIMU.desktop;
+echo "Version=3" >> /home/usuario/Escritorio/CADeSIMU.desktop;
+echo "Type=Application" >> /home/usuario/Escritorio/CADeSIMU.desktop;
+echo "Name=CAEeSIMU" >> /home/usuario/Escritorio/CADeSIMU.desktop;
+echo "Comment=CAEeSIMU" >> /home/usuario/Escritorio/CADeSIMU.desktop;
+echo "Exec= wine /home/usuario/wine/CADeSIMU/CADeSIMU.exe" >> /home/usuario/Escritorio/CADeSIMU.desktop;
+echo "Icon=accessories-text-editor" >> /home/usuario/Escritorio/CADeSIMU.desktop;
+echo "Path=/home/usuario/wine/CADeSIMU/" >> /home/usuario/Escritorio/CADeSIMU.desktop;
+echo "Terminal=false" >> /home/usuario/Escritorio/CADeSIMU.desktop;
+echo "StartupNotify=false" >> /home/usuario/Escritorio/CADeSIMU.desktop;
 chmod 777 /home/usuario/wine/ -R
 echo "${ca}Hecho!${cn}";
 sleep 1
