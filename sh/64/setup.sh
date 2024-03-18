@@ -3366,13 +3366,16 @@ opcion96="1";
 clear
 echo "Nuestro agradecimiento al credor de la aplicación por ceder su incorportación a la maqueta."
 echo "https://cade-simu.com/"
+sleep 1
+clear
 echo "Agradecimiento a José Ángel Araújo (CIFP FONTECARMOA) por la iniciativa de incluirlo."
 sleep 1
+clear
 dpkg --add-architecture i386
 apt-get -y install unrar
 apt-get update
 apt-get install wine32
-wget https://mega.nz/folder/V1ElSK7a#emsZo68Jxbn98xfWDfO8-A
+wget https://mega.nz/file/JKZlEbiL#3P0gn70l6x80nS8Qob9uq9h04nLIP3EbMz0xZwKPQ3I
 unrar x CADe_SIMU V4.2.rar /home/usuario/CADe_SIMU_V4.2/
 echo "[Desktop Entry]" > /home/usuario/Escritorio/CAEeSIMU.desktop;
 echo "Version=3" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
