@@ -468,7 +468,12 @@ then
 else
     echo "${cM}    [ ]${cn} 48: Instalar app Scanner de Red.";
 fi
-echo
+if [ "$opcion49" = "1" ]
+then
+    echo "${cv}    [x]${cn} 49: Instalar UnRAR (descompresor).${cn}";
+else
+    echo "${cM}    [ ]${cn} 49: Instalar UnRAR (descompresor).";
+fi
 echo
 echo
 echo
@@ -734,7 +739,7 @@ fi
 if [ "$menu" = "9" ]
 then
 printf %b ${cF}
-echo "(Electronica)";
+echo "(Electronica / Electricidad)";
 echo
 if [ "$opcion91" = "1" ]
 then
@@ -772,7 +777,12 @@ then
 else
     echo "${cM}    [ ]${cn} 96: Qelectrotech diseño Industrial Electricidad,Neumatica,...";
 fi
-echo
+if [ "$opcion97" = "1" ]
+then
+    echo "${cv}    [x]${cn} 97: CADe-SIMU diseño Industrial Electricidad.${cn}";
+else
+    echo "${cM}    [ ]${cn} 97: CADe-SIMU diseño Industrial Electricidad.";
+fi
 echo
 echo
 echo
@@ -2199,6 +2209,20 @@ sleep 1
 opcion48="0";
 ;;
 
+##Opcion 49
+49)
+sudo apt-get install unrar
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion49="1";
+;;
+##Opcion -49
+-49)
+sudo apt-get remove unrar
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion49="0";
+;;
 
 ##Opcion 51
 51)
@@ -3338,7 +3362,28 @@ sleep 1
 opcion96="1";
 ;;
 
-
+97)
+dpkg --add-architecture i386
+apt-get -y install unrar
+apt-get update
+apt-get install wine32
+wget https://mega.nz/folder/V1ElSK7a#emsZo68Jxbn98xfWDfO8-A
+unrar x CADe_SIMU V4.2.rar /home/usuario/CADe_SIMU_V4.2/
+echo "[Desktop Entry]" > /home/usuario/Escritorio/CAEeSIMU.desktop;
+echo "Version=3" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
+echo "Type=Application" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
+echo "Name=CAEeSIMU" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
+echo "Comment=CAEeSIMU" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
+echo "Exec= wine /home/usuario/CADe_SIMU_V4.2/CADe_SIMU_V4.2.exe" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
+echo "Icon=accessories-text-editor" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
+echo "Path=/home/usuario/CADe_SIMU_V4.2/" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
+echo "Terminal=false" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
+echo "StartupNotify=false" >> /home/usuario/Escritorio/CAEeSIMU.desktop;
+chmod 777 /home/usuario/CADe_SIMU_V4.2/ -R
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion97="1";
+;;
 
 
 ##Opcion skype
