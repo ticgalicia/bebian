@@ -3387,8 +3387,8 @@ mega-get https://mega.nz/folder/hBgSTKiD#ISyC9foVGxhAayb-wKYmBQ /home/usuario/wi
 echo "[Desktop Entry]" > /home/usuario/Escritorio/CADe_SIMU.desktop;
 echo "Version=3" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
 echo "Type=Application" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
-echo "Name=CAEeSIMU" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
-echo "Comment=CAEeSIMU" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
+echo "Name=CADe_SIMU" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
+echo "Comment=CADe_SIMU" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
 echo "Exec= wine CADeSIMU.exe" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
 echo "Icon=accessories-text-editor" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
 echo "Path=/home/usuario/wine/CADe_SIMU/" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
