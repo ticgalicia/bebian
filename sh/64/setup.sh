@@ -2211,9 +2211,9 @@ opcion48="0";
 
 ##Opcion 49
 49)
-wget https://mega.nz/linux/repo/Debian_12/amd64/megacmd-Debian_12_amd64.deb 
-apt -y install "megacmd-Debian_12_amd64.deb"
-rm megacmd-Debian_12_amd64.deb
+wget https://mega.nz/linux/repo/Debian_12/amd64/megacmd_1.6.3-1.1_amd64.deb 
+apt -y install megacmd_1.6.3-1.1_amd64.deb
+rm megacmd_1.6.3-1.1_amd64.deb
 echo "${ca}Hecho!${cn}";
 sleep 1
 opcion49="1";
@@ -3366,9 +3366,9 @@ clear
 echo "Agradecimiento a José Ángel Araújo (CIFP FONTECARMOA) por la iniciativa de incluirlo."
 sleep 2
 dpkg --add-architecture i386
-wget https://mega.nz/linux/repo/Debian_12/amd64/megacmd-Debian_12_amd64.deb 
-apt -y install "megacmd-Debian_12_amd64.deb"
-rm megacmd-Debian_12_amd64.deb
+wget https://mega.nz/linux/repo/Debian_12/amd64/megacmd_1.6.3-1.1_amd64.deb 
+apt -y install megacmd_1.6.3-1.1_amd64.deb
+rm megacmd_1.6.3-1.1_amd64.deb
 apt-get update
 apt-get install wine32
 mega-get https://mega.nz/file/JKZlEbiL#3P0gn70l6x80nS8Qob9uq9h04nLIP3EbMz0xZwKPQ3I
