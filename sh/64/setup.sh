@@ -779,9 +779,9 @@ else
 fi
 if [ "$opcion97" = "1" ]
 then
-    echo "${cv}    [x]${cn} 97: CADe_SIMU diseño Industrial Electricidad.${cn}";
+    echo "${cv}    [x]${cn} 97: CADe_SIMU diseño Industrial Electricidad (Bebian 12).${cn}";
 else
-    echo "${cM}    [ ]${cn} 97: CADe_SIMU diseño Industrial Electricidad.";
+    echo "${cM}    [ ]${cn} 97: CADe_SIMU diseño Industrial Electricidad (Bebian 12).";
 fi
 echo
 echo
