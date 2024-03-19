@@ -3364,7 +3364,7 @@ opcion96="1";
 
 97)
 clear
-echo "Nuestro agradecimiento al credor Juan Luis Villanve Montoto autorizar su incorportación a la maqueta."
+echo "Nuestro agradecimiento al credor Juan Luis Villanueva Montoto autorizar su incorportación a la maqueta."
 echo "https://canalplc.blogspot.com"
 sleep 3
 clear
