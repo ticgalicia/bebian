@@ -3365,7 +3365,7 @@ opcion96="1";
 97)
 clear
 echo "Nuestro agradecimiento al credor de la aplicación por ceder su incorportación a la maqueta."
-echo "https://cade-simu.com/"
+echo "https://canalplc.blogspot.com"
 sleep 3
 clear
 echo "Agradecimiento a José Ángel Araújo (CIFP FONTECARMOA) por la iniciativa de incluirlo."
