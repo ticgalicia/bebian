@@ -2608,15 +2608,19 @@ opcion71="1";
 if [ "$VTIPO" = "x86_64" ]
 then
 	clear
-	echo "${ca}Instalando...${cn}";
+	echo "${ca}Recuerda tener el dispositivo conectado para que reconozca el puerto${cn}";
+	sleep 2
+	echo "${ca}Instalando librerias...${cn}";
+ 	apt-get install -y python3-tk python3-serial python-is-python3
 	sleep 1
+ 	echo "${ca}Instalando arduinoblocks...${cn}";
 	wget http://www.arduinoblocks.com/web/site/abconnectordownload/25
  	dpkg -iG 25
 	rm 25
 fi
-echo "${ca}Abriendo permisos al puerto serie${cn}";
+echo "${ca}Abriendo permisos al los puertos serie reconocidos${cn}";
 sleep 2
-chmod 777 /dev/ttyUSB0
+chmod 777 /dev/tty*
 usermod -a -G dialout usuario
 echo "${ca}Hecho!${cn}";
 sleep 1
