@@ -6198,12 +6198,12 @@ clear
 echo "${ca}Atencion, se agregaran los repositorios oficiales a sources.list${cn}";
 echo "${ca}Podrian duplicarse las entradas (puedes revisarlas con -sources){cn}";
 read pause
-echo "deb http://deb.debian.org/debian buster main contrib non-free">> /etc/apt/sources.list;
-echo "deb-src  http://deb.debian.org/debian buster main contrib non-free">> /etc/apt/sources.list;
-echo "deb http://deb.debian.org/debian buster-updates main contrib non-free">> /etc/apt/sources.list;
-echo "deb-src  http://deb.debian.org/debian buster-updates main contrib non-free">> /etc/apt/sources.list;
-echo "deb http://security.debian.org/ buster/updates main contrib non-free">> /etc/apt/sources.list;
-echo "deb-src http://security.debian.org/ buster/updates main contrib non-free">> /etc/apt/sources.list;
+echo "deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware">> /etc/apt/sources.list;
+echo "deb-src http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware">> /etc/apt/sources.list;
+echo "deb http://deb.debian.org/debian-security/ bookworm-security main contrib non-free non-free-firmware">> /etc/apt/sources.list;
+echo "deb-src http://deb.debian.org/debian-security/ bookworm-security main contrib non-free non-free-firmware">> /etc/apt/sources.list;
+echo "deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware">> /etc/apt/sources.list;
+echo "deb-src http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware">> /etc/apt/sources.list;
 echo "${ca}Hecho!${cn}";
 sleep 1
 ;;
