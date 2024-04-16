@@ -1352,17 +1352,24 @@ apt-get --fix-broken install
 	clear
 	echo "${ca}Instalando...${cn}";
 	sleep 1
-	echo "deb http://deb.debian.org/debian buster main contrib non-free">> /etc/apt/sources.list;
-	echo "deb-src  http://deb.debian.org/debian buster main contrib non-free">> /etc/apt/sources.list;
-	echo "deb http://deb.debian.org/debian buster-updates main contrib non-free">> /etc/apt/sources.list;
-	echo "deb-src  http://deb.debian.org/debian buster-updates main contrib non-free">> /etc/apt/sources.list;
-	echo "deb http://security.debian.org/ buster/updates main contrib non-free">> /etc/apt/sources.list;
-	echo "deb-src http://security.debian.org/ buster/updates main contrib non-free">> /etc/apt/sources.list;
+	echo "ATENCION";
+  	sleep 1
+	echo "SI NO FUNCIONA,";
+ 	sleep 1
+	echo "y si no has hecho con anterioridad una modificacion de sources,";
+ 	sleep 1
+  	echo "ejecuta el comando :   sources";
+ 	sleep 1
+    	echo "para agregar los repositorios non-free";
+ 	sleep 1
+      	echo "podras revisarlos con el comando -sources";
+ 	sleep 1
 	else
 	clear
 	echo "${ca}Instalando...${cn}";
 	sleep 1
 	echo "##WIFI##">> /etc/apt/sources.list;
+ 	echo "##NONFREE##">> /etc/apt/sources.list;
 	echo "deb http://deb.debian.org/debian stretch main contrib non-free">> /etc/apt/sources.list;
 	echo "deb-src  http://deb.debian.org/debian stretch main contrib non-free">> /etc/apt/sources.list;
 	echo "deb http://deb.debian.org/debian stretch-updates main contrib non-free">> /etc/apt/sources.list;
