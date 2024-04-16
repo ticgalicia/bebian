@@ -2620,6 +2620,10 @@ then
 fi
 echo "${ca}Abriendo permisos al los puertos serie reconocidos${cn}";
 sleep 2
+echo "${ca}MARCA EL PUERTO CONECTADO (ES EL QUE QUEDARÁ ACTIVO)${cn}";
+sleep 2
+echo "${ca}PUEDES HACER EL PROCESO VARIAS VECES Y MARCAR VARIOS PUERTOS${cn}";
+sleep 3
 chmod 777 /dev/tty*
 usermod -a -G dialout usuario
 echo "${ca}Hecho!${cn}";
