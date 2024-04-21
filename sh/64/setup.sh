@@ -2644,9 +2644,13 @@ opcion71b="1";
 if [ "$VTIPO" = "x86_64" ]
 then
 	clear
-	echo "${ca}Instalando visualino...${cn}";
+	echo "${ca}Instalando. ATENCION Visualino (oficial) ha desaparecido...${cn}";
 	sleep 1
-	wget http://www.visualino.net/downloads/ubuntu/visualino_0.7_amd64.deb
+	##wget http://www.visualino.net/downloads/ubuntu/visualino_0.7_amd64.deb
+	echo "${ca}Descargando de ...${cn}";
+	echo "${ca}https://migasfree.educa.aragon.es/public/VX-18.04/REPOSITORIES/dists/repo-base-robotica/PKGS/${cn}";
+	sleep 1
+ 	wget https://migasfree.educa.aragon.es/public/VX-18.04/REPOSITORIES/dists/repo-base-robotica/PKGS/visualino_0.7_amd64.deb
         dpkg -iG visualino_0.7_amd64.deb
 	rm visualino_0.7_amd64.deb
 	echo "${ca}Instalando crumble...${cn}";
@@ -2658,7 +2662,7 @@ then
 else
 	echo "${ca}Instalando...${cn}";
 	sleep 1
-	wget http://www.visualino.net/downloads/ubuntu/visualino_0.7_i386.deb
+	wget https://migasfree.educa.aragon.es/public/VX-18.04/REPOSITORIES/dists/repo-base-robotica/PKGS/visualino_0.7_i386.deb
 	dpkg -iG visualino_0.7_i386.deb
 	rm visualino_0.7_i386.deb
 fi
