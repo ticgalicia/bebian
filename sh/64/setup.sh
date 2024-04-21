@@ -90,7 +90,7 @@ libver64="7.6.4";
 liburl64="http://ftp.uvigo.es/tdf/libreoffice/stable/";
 libver32="6.2.8.2";
 liburl32="http://downloadarchive.documentfoundation.org/libreoffice/old/"
-discver64="0.0.47";
+discver64="0.0.50";
 
 
 ##borrar leeme escritorio por defecto
@@ -5151,6 +5151,104 @@ sleep 1
 opcion88="1";
 ;;
 
+
+##Opcion bebianapt
+##Instalar todos los programas abalar
+bebianapt)
+##Anulamos el repositorio CD
+esto="deb cdrom:";
+poresto="# deb cdrom:";
+sed -i "s/$esto/$poresto/g" /etc/apt/sources.list;
+
+mkdir debtemp
+cd debtemp
+apt-get -y install gdebi
+apt-get -y install xinput-calibrator
+apt-get -y install shutter
+apt-get -y install autofirma
+apt-get -y install wget
+apt-get -y install lumi
+
+
+## MULTIMEDIA
+apt-get -y install openshot
+apt-get -y install freemind
+apt-get -y install musescore
+apt-get -y install audacity
+apt-get -y install winff
+apt-get -y install guvcview
+
+## GRAFICOS
+
+apt-get -y install mypaint
+apt-get -y install librecad
+apt-get -y install freecad
+apt-get -y install inkscape
+apt-get -y install blender
+apt-get -y install shotwell
+apt-get -y install openscad
+
+## ELECTRONICA
+apt-get -y install geda
+apt-get -y install fritzing
+apt-get -y install s4a
+
+## OFICINA
+apt-get -qq update
+apt-get -y install calibre
+apt-get -y install pdfshuffler
+
+## DESARROLLO
+apt-get -y install arduino
+apt-get -y install scratch
+apt-get -y install geany
+
+## INTERNET
+apt-get -f install chromium chromium-l10n
+  
+## EDUCACION
+apt-get -y install avogadro
+apt-get -y install gperiodic
+apt-get -y install jclic
+apt-get -y install lybniz
+apt-get -y install stellarium
+apt-get -y install kalgebra
+apt-get -y install kalzium
+apt-get -y install kbruch
+apt-get -y install kgeography
+apt-get -y install klettres
+apt-get -y install kwordquiz
+apt-get -y install marble
+apt-get -y install step
+apt-get -y install ktuberling
+apt-get -y install pdfshuffler
+
+## ACCESORIOS ##
+apt-get -y install nautilus
+apt-get -y install galculator
+apt-get -y install pdfmod
+apt-get -y install terminator
+apt-get -y install vim
+apt-get -y install xournal
+apt-get -y install kate
+apt-get -y install shutter
+
+## PAQUETES ##
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget http://descargas.pntic.mec.es/cedec/exe_learning/2.3.1/intef-exe_2.3.1_all.deb
+wget http://ftp.es.debian.org/debian/pool/main/s/squeak-vm/squeak-vm_4.10.2.2614-1.1+b1_i386.deb
+wget http://s4a.cat/downloads/S4A16.deb
+##wget http://mblockapp.oss-cn-hongkong.aliyuncs.com/mBlock4.0/mBlock_4.0.4_i386.deb
+
+## DESCOMPRIMIR PAQUETES ##
+dpkg -i *.deb
+
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion88="1";
+;;
+
+
 ##Opcion fullapt
 ##Instalar todos los programas abalar
 fullapt)
@@ -5255,7 +5353,7 @@ apt-get -y install kate
 apt-get -y install shutter
 
 ## PAQUETES ##
-wget http://visualino.net/downloads/ubuntu/visualino_0.7_i386.deb
+##wget http://visualino.net/downloads/ubuntu/visualino_0.7_i386.deb
 wget http://descargas.pntic.mec.es/cedec/exe_learning/2.3.1/intef-exe_2.3.1_all.deb
 wget http://ftp.es.debian.org/debian/pool/main/s/squeak-vm/squeak-vm_4.10.2.2614-1.1+b1_i386.deb
 wget http://s4a.cat/downloads/S4A16.deb
