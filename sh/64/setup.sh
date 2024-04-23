@@ -5166,9 +5166,9 @@ sed -i "s/$esto/$poresto/g" /etc/apt/sources.list;
 
 mkdir debtemp
 cd debtemp
+
 apt-get -y install gdebi
 apt-get -y install xinput-calibrator
-apt-get -y install shutter
 apt-get -y install autofirma
 apt-get -y install wget
 apt-get -y install lumi
@@ -5241,7 +5241,7 @@ apt-get -y install shutter
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget http://descargas.pntic.mec.es/cedec/exe_learning/2.3.1/intef-exe_2.3.1_all.deb
 wget http://ftp.es.debian.org/debian/pool/main/s/squeak-vm/squeak-vm_4.10.2.2614-1.1+b1_i386.deb
-wget http://s4a.cat/downloads/S4A16.deb
+#wget http://s4a.cat/downloads/S4A16.deb
 ##wget http://mblockapp.oss-cn-hongkong.aliyuncs.com/mBlock4.0/mBlock_4.0.4_i386.deb
 
 ## DESCOMPRIMIR PAQUETES ##
