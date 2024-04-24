@@ -5173,10 +5173,8 @@ apt-get -y install autofirma
 apt-get -y install wget
 apt-get -y install lumi
 
-
 ## MULTIMEDIA
 apt-get -y install openshot
-apt-get -y install freemind
 apt-get -y install musescore
 apt-get -y install audacity
 apt-get -y install winff
@@ -5195,7 +5193,7 @@ apt-get -y install openscad
 ## ELECTRONICA
 apt-get -y install geda
 apt-get -y install fritzing
-apt-get -y install s4a
+#apt-get -y install s4a
 
 ## OFICINA
 apt-get -qq update
@@ -5206,6 +5204,8 @@ apt-get -y install pdfshuffler
 apt-get -y install arduino
 apt-get -y install scratch
 apt-get -y install geany
+apt-get -y install glade
+apt-get -y install freemind
 
 ## INTERNET
 apt-get -f install chromium chromium-l10n
@@ -5218,14 +5218,9 @@ apt-get -y install lybniz
 apt-get -y install stellarium
 apt-get -y install kalgebra
 apt-get -y install kalzium
-apt-get -y install kbruch
-apt-get -y install kgeography
-apt-get -y install klettres
-apt-get -y install kwordquiz
 apt-get -y install marble
 apt-get -y install step
 apt-get -y install ktuberling
-apt-get -y install pdfshuffler
 
 ## ACCESORIOS ##
 apt-get -y install nautilus
