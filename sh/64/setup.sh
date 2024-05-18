@@ -2426,6 +2426,16 @@ sleep 2
 opcion58="1";
 ;;
 
+-58)
+clear
+echo "${ca}Desinstalando chrome!${cn}";
+sleep 2
+apt-get remove google-chrome-stable
+echo "${ca}Hecho!${cn}";
+sleep 2
+opcion58="0";
+;;
+
 
 ##Opcion 59
 59)
