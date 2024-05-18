@@ -5467,7 +5467,7 @@ else
 	echo "${cr}Ya puedes ejecutar de nuevo el script.${cn}";
 fi
 clear
-echo "${cv}Puedes forzar la desisntalacion de chrome con -58 y volverlo a instalar... ${cn}";
+echo "${cv}Puedes forzar la desinstalacion de chrome con -58 y volverlo a instalar... ${cn}";
 sleep 2
 # Marcando ultimo update
 echo "$DIA"> setup.log;
