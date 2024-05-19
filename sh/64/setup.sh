@@ -2430,7 +2430,10 @@ opcion58="1";
 clear
 echo "${ca}Desinstalando chrome!${cn}";
 sleep 2
-apt-get remove google-chrome-stable
+dpkg -r google-chrome-stable
+apt-get -y remove google-chrome-stable
+rm /home/usuario/.config/google-chrome/ -R
+apt-get -y purge google-chrome-stable
 echo "${ca}Hecho!${cn}";
 sleep 2
 opcion58="0";
