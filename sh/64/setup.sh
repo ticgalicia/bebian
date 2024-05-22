@@ -3624,28 +3624,14 @@ opcion106="0";
 
 ##Opcion 107
 107)
-if [ "$VTIPO" = "x86_64" ]
-then
-
-	clear
-	echo "${ca}Instalando...${cn}";
-	sleep 1
-	wget http://apt.foo.li/debian/pool/non-free/a/anydesk/anydesk_2.9.5-1_amd64.deb
-	apt --fix-broken -y install
-	dpkg -iG anydesk_2.9.5-1_amd64.deb
-	apt --fix-broken -y install
-	rm anydesk_2.9.5-1_amd64.deb
-
-else
-	clear
-	echo "${ca}Instalando...${cn}";
-	sleep 1
-	wget http://apt.foo.li/debian/pool/non-free/a/anydesk/anydesk_2.9.5-1_i386.deb
-	##wget $REPOSITORIO/repository/anydesk_2.9.5-1_i386.deb
-	dpkg -iG anydesk_2.9.5-1_i386.deb
-	apt --fix-broken -y install
-	rm anydesk_2.9.5-1_i386.deb
-fi
+clear
+echo "${ca}Instalando...${cn}";
+sleep 1
+wget https://download.anydesk.com/linux/anydesk_6.3.2-1_amd64.deb
+apt --fix-broken -y install
+dpkg -iG anydesk_6.3.2-1_amd64.deb
+apt --fix-broken -y install
+rm anydesk_6.3.2-1_amd64.deb
 clear
 echo "${ca}Hecho!${cn}";
 sleep 1
