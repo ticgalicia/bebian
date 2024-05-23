@@ -46,7 +46,7 @@ echo $1;
 
 ##PARAMETROS DEL SCRIPT:
 stty cols 132 rows 28
-version=3.14.01.24
+version=3.23.05.24
 RUTASCRIPT=$(readlink -f $0);
 DIRECTORIO=$(cd "$(dirname "$0")"; pwd -P);
 REPOSITORIO="https://raw.githubusercontent.com/ticgalicia/bebian/master";
@@ -853,7 +853,12 @@ then
 else
     echo "${cM}    [ ]${cn} 109: Cliente Emule";
 fi
-echo
+if [ "$opcion110" = "1" ]
+then
+    echo "${cv}    [x]${cn} 110: Teamviewer${cn}";
+else
+    echo "${cM}    [ ]${cn} 110: Teamviewer";
+fi
 echo
 echo
 echo
@@ -3698,6 +3703,33 @@ clear
 echo "Borrado";
 sleep 1
 opcion109="1";
+;;
+
+##Opcion 110
+110)
+clear
+echo "${ca}Instalando...${cn}";
+sleep 1
+wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+apt --fix-broken -y install
+dpkg -iG teamviewer_amd64.deb
+apt --fix-broken -y install
+rm teamviewer_amd64.deb
+clear
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion88="1";
+;;
+
+##Opcion 110
+-110)
+echo "${ca}Borrando...${cn}";
+sleep 1
+apt-get -y remove teamviewer
+clear
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion107="0";
 ;;
 
 ##Opcion team
