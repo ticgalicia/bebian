@@ -59,7 +59,8 @@ ippc=$(ip addr | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*
 macpc=$(ip -o link | grep ether | awk '{ print $17 }');
 CENTROS="http://51.38.187.16/ticgalicia/centros.php?e=$hostn&i=$ippc&m=$macpc&v=$VSIST";
 DIA=`date +"%d/%m/%Y"`;
-UDIA=$( cat setup.log );
+UDIA=$( cat logsetup.log );
+rm setup.log
 ##colores
 
 ###ACTIVAR TECLADO NUMERICO POR DEFECTO
@@ -5491,7 +5492,7 @@ clear
 echo "${cv}Puedes forzar la desinstalacion de chrome con -58 y volverlo a instalar... ${cn}";
 sleep 2
 # Marcando ultimo update
-echo "$DIA"> setup.log;
+echo "$DIA"> logsetup.log;
 exit
 opcion88="1";
 ;;
