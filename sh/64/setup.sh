@@ -46,7 +46,7 @@ echo $1;
 
 ##PARAMETROS DEL SCRIPT:
 stty cols 132 rows 28
-version=3.23.05.24
+version=3.13.09.24
 RUTASCRIPT=$(readlink -f $0);
 DIRECTORIO=$(cd "$(dirname "$0")"; pwd -P);
 REPOSITORIO="https://raw.githubusercontent.com/ticgalicia/bebian/master";
@@ -347,7 +347,12 @@ then
 else
     echo "${cM}    [ ]${cn} 28: Geogebra Classic 6.";
 fi
-echo
+if [ "$opcion29" = "1" ]
+then
+    echo "${cv}    [x]${cn} 29: Compatibilidad con Windows (Wine).${cn}";
+else
+    echo "${cM}    [ ]${cn} 29: Compatibilidad con Windows (Wine).";
+fi
 echo
 echo
 echo
@@ -1685,6 +1690,24 @@ sleep 1
 opcion28="1";
 ;;
 
+##Opcion wine
+29)
+clear
+echo "${ca}Instalando...  ${cn}";
+sleep 1
+apt --fix-broken -y install
+apt-get update --fix-missing
+apt-get install -f
+apt-get remove
+apt -y autoremove
+apt-get update
+apt-get install wine32
+mkdir /home/usuario/wine/
+clear
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion29="1";
+;;
 
 ##Opcion 31
 31)
