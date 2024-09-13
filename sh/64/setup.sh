@@ -4794,7 +4794,7 @@ then
 	echo "Icon=/home/usuario/wine/coco/icon48.png">> /usr/share/applications/cocodrile.desktop
 	echo "Terminal=false">> /home/usuario/Escritorio/cocodrile.desktop
 	echo "Type=Application">> /home/usuario/Escritorio/cocodrile.desktop
-	chmod 777 /home/usuario/Escritorio/Cocodrile.desktop
+	chmod 777 /home/usuario/Escritorio/cocodrile.desktop
  
 	echo "[Desktop Entry]" > /usr/share/applications/cocodrile.desktop
 	echo "Name=Crocodrile">> /usr/share/applications/cocodrile.desktop
