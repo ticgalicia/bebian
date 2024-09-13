@@ -4782,11 +4782,18 @@ then
 	apt-get -y install wine32
 	wget $REPOSITORIO/repository/coco.tar.gz
 	tar -xf coco.tar.gz -C /home/usuario
-	cp /home/usuario/wine/accesos/* /home/usuario/Escritorio/
 	chmod 777 /home/usuario/Escritorio/Cocodrile.desktop
 	dpkg --add-architecture i386
 	apt-get -qq update
         apt --fix-broken -y install
+	
+	echo "[Desktop Entry]" > /home/usuario/Escritorio/cocodrile.desktop
+	echo "Name=Crocodrile">> /home/usuario/Escritorio/cocodrile.desktop
+	echo "Comment=">> /home/usuario/Escritorio/cocodrile.desktop
+	echo "Exec=wine /home/usuario/wine/coco/CROCCLIP.EXE">> /usr/share/applications/cocodrile.desktop
+	echo "Icon=/home/usuario/wine/coco/icon48.png">> /usr/share/applications/cocodrile.desktop
+	echo "Terminal=false">> /home/usuario/Escritorio/cocodrile.desktop
+	echo "Type=Application">> /home/usuario/Escritorio/cocodrile.desktop
 
 	echo "[Desktop Entry]" > /usr/share/applications/cocodrile.desktop
 	echo "Name=Crocodrile">> /usr/share/applications/cocodrile.desktop
