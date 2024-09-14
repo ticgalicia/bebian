@@ -865,8 +865,8 @@ then
 else
     echo "${cM}    [ ]${cn} 110: Teamviewer";
 fi
-echo
-echo
+echo "Otros comandos: bebianapt - Intala las parilaciones de la maqueta"
+echo "en un debia instalado desde cero"
 echo
 echo "${cM}    INTRO: Menu 1 | \c";
 fi
