@@ -4790,8 +4790,8 @@ then
 	echo "[Desktop Entry]" > /home/usuario/Escritorio/cocodrile.desktop
 	echo "Name=Crocodrile">> /home/usuario/Escritorio/cocodrile.desktop
 	echo "Comment=">> /home/usuario/Escritorio/cocodrile.desktop
-	echo "Exec=wine /home/usuario/wine/coco/CROCCLIP.EXE">> /usr/share/applications/cocodrile.desktop
-	echo "Icon=/home/usuario/wine/coco/icon48.png">> /usr/share/applications/cocodrile.desktop
+	echo "Exec=wine /home/usuario/wine/coco/CROCCLIP.EXE">> /home/usuario/Escritorio/cocodrile.desktop
+	echo "Icon=/home/usuario/wine/coco/icon48.png">> /home/usuario/Escritorio/cocodrile.desktop
 	echo "Terminal=false">> /home/usuario/Escritorio/cocodrile.desktop
 	echo "Type=Application">> /home/usuario/Escritorio/cocodrile.desktop
 	chmod 777 /home/usuario/Escritorio/cocodrile.desktop
