@@ -6415,6 +6415,15 @@ menu=700;
 clear;
 ;;
 
+##Opcion extra
+extra)
+clear;
+echo "Menu extra";
+sleep 1
+menu=900;
+clear;
+;;
+
 ##Opcion ms
 0)
 clear;
