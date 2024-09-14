@@ -793,7 +793,7 @@ echo
 echo
 echo
 echo
-echo
+echo "Algunos programas pueden ser desinstalados con el guion delante Ej: -22 "
 echo
 echo "${cM}    INTRO: Menu 10 | \c";
 fi
@@ -865,8 +865,8 @@ then
 else
     echo "${cM}    [ ]${cn} 110: Teamviewer";
 fi
-echo "Otros comandos: bebianapt - Intala las parilaciones de la maqueta"
-echo "en un debia instalado desde cero"
+echo "Otros comandos: bebianapt - Intala las aplicaciones de la maqueta"
+echo "bebian en un debia instalado desde cero"
 echo
 echo "${cM}    INTRO: Menu 1 | \c";
 fi
