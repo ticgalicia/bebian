@@ -4398,6 +4398,7 @@ su usuario -C "echo  > /home/usuario/.bash_history"
 rm /home/usuario/.bash_history
 touch /home/usuario/.bash_history
 su usuario -C 'history -c'
+history -c
 clear
 echo "Borrado!. Reinicia el equipo.";
 sleep 2
