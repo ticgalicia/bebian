@@ -1051,6 +1051,90 @@ echo
 echo "${cM}    INTRO: Menu 1 (serv.) | 0: Menu 0 | \c";
 fi
 
+####################################################################
+###Menu extra
+##menu900
+if [ "$menu" = "900" ]
+then
+echo "(extra)";
+echo
+echo cocodrile - Instala el Crocodile
+echo wifi - Instala todos los driver de tarjetas wifi (requiere LAN)
+echo 
+echo
+echo
+echo limpia - Borra los historiales del terminal
+echo
+echo
+echo
+echo
+echo
+echo "${cM}    INTRO: Menu 2 (extra) | 0: Menu 0 | \c";
+fi
+
+##menu701
+if [ "$menu" = "901" ]
+then
+echo "(servidores usuarios)";
+echo
+if [ "$opcion911" = "1" ]
+then
+    echo "${cv}    [x]${cn} 911: Crear usuario.${cn}";
+else
+    echo "${cM}    [ ]${cn} 911: Crear usuario.";
+fi
+
+if [ "$opcion912" = "1" ]
+then
+    echo "${cv}    [x]${cn} 912: Crear grupo usuarios.${cn}";
+else
+    echo "${cM}    [ ]${cn} 912: Crear grupo usuarios.";
+fi
+
+if [ "$opcion913" = "1" ]
+then
+    echo "${cv}    [x]${cn} 913: Asignar grupo a usuario.${cn}";
+else
+    echo "${cM}    [ ]${cn} 713: Asignar grupo a usuario.";
+fi
+
+if [ "$opcion914" = "1" ]
+then
+    echo "${cv}    [x]${cn} 914: Mover usuario a un grupo.${cn}";
+else
+    echo "${cM}    [ ]${cn} 914: Mover usuario a un grupo.";
+fi
+
+if [ "$opcion715" = "1" ]
+then
+    echo "${cv}    [x]${cn} 915: Crear password a usuario Samba.${cn}";
+else
+    echo "${cM}    [ ]${cn} 915: Crear password a usuario Samba.";
+fi
+
+if [ "$opcion719" = "1" ]
+then
+    echo "${cv}    [x]${cn} 719: Instalar Gestor VISUAL de usuarios.${cn}";
+else
+    echo "${cM}    [ ]${cn} 719: Instalar Gestor VISUAL de usuarios.";
+fi
+echo
+echo
+echo
+echo
+echo
+echo "${cM}  0: Menu 0 | \c";
+fi
+menu=899;
+echo
+echo
+echo
+echo
+echo
+echo
+echo "${cM}    INTRO: Menu 1 (extra) | 0: Menu 0 | \c";
+fi
+
 ##fin menus
 
 echo "a: Ayuda. | i: Informacion | q: Salir | fix: reparar${cn}";
