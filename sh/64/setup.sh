@@ -1083,7 +1083,6 @@ echo
 echo
 echo
 echo "${cM}  0: Menu 0 | \c";
-fi
 menu=899;
 echo
 echo
