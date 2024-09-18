@@ -1051,47 +1051,6 @@ echo
 echo "${cM}    INTRO: Menu 1 (serv.) | 0: Menu 0 | \c";
 fi
 
-####################################################################
-###Menu extra
-##menu900
-if [ "$menu" = "900" ]
-then
-echo "(extra)";
-echo
-echo cocodrile - Instala el Crocodile
-echo wifi - Instala todos los driver de tarjetas wifi (requiere LAN)
-echo 
-echo
-echo
-echo limpia - Borra los historiales del terminal
-echo
-echo
-echo
-echo
-echo
-echo "${cM}    INTRO: Menu 2 (extra) | 0: Menu 0 | \c";
-fi
-
-##menu701
-if [ "$menu" = "901" ]
-then
-echo "(servidores usuarios)";
-echo
-echo
-echo
-echo
-echo
-echo
-echo "${cM}  0: Menu 0 | \c";
-menu=899;
-echo
-echo
-echo
-echo
-echo
-echo
-echo "${cM}    INTRO: Menu 1 (extra) | 0: Menu 0 | \c";
-fi
 
 ##fin menus
 
