@@ -865,8 +865,8 @@ then
 else
     echo "${cM}    [ ]${cn} 110: Teamviewer";
 fi
-echo "Otros comandos: bebianapt - Intala las parilaciones de la maqueta"
-echo "en un debia instalado desde cero"
+echo
+echo
 echo
 echo "${cM}    INTRO: Menu 1 | \c";
 fi
@@ -1042,6 +1042,74 @@ else
     echo "${cM}    [ ]${cn} 736: Activar FTP PXE.";
 fi
 menu=699;
+echo
+echo
+echo
+echo
+echo
+echo
+echo "${cM}    INTRO: Menu 1 (serv.) | 0: Menu 0 | \c";
+fi
+
+
+####################################################################
+###Menu extra
+##menu900
+if [ "$menu" = "900" ]
+then
+echo "(otros comandos)";
+echo
+echo
+echo
+echo "backuptic - Crea un backup del perfil usuario.";
+echo "restaurartic - Restaura la copia de backuptic";
+echo "congelar - Restaura el backuptic en cada reinicio";
+echo "wifi - Intala los drivers de las tarjetas wifi (necesita LAN)";
+echo "bebianapt - Intala las aplicaciones de la maqueta EDIXGAL";
+echo "fullapt - Instala todas las aplicaicones de ABALAR";
+echo
+echo
+echo
+echo "${cM}    INTRO: Menu2 (otros) | 0: Menu 0 | \c";
+fi
+
+##menu901
+if [ "$menu" = "901" ]
+then
+echo "(otros aplicaciones)";
+echo
+echo
+echo
+echo "cocodrile";
+echo "pneusim";
+echo "flsim";
+echo
+echo
+echo "${cM}    INTRO: Menu 3 (otros) | 0: Menu 0 | \c";
+fi
+
+##menu902
+if [ "$menu" = "902" ]
+then
+echo "(otros )";
+echo
+echo
+echo
+echo
+echo
+echo
+echo
+echo
+echo "${cM}    INTRO: Menu 4 (serv.) | 0: Menu 0 | \c";
+fi
+
+##menu903
+if [ "$menu" = "903" ]
+then
+echo "(otros)";
+echo
+
+menu=899;
 echo
 echo
 echo
@@ -6412,6 +6480,15 @@ clear;
 echo "Menu servidores";
 sleep 1
 menu=700;
+clear;
+;;
+
+##Opcion ms
+otros)
+clear;
+echo "Menu otros";
+sleep 1
+menu=900;
 clear;
 ;;
 
