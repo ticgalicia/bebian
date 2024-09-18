@@ -793,7 +793,7 @@ echo
 echo
 echo
 echo
-echo "Algunos programas pueden ser desinstalados con el guion delante Ej: -22 "
+echo
 echo
 echo "${cM}    INTRO: Menu 10 | \c";
 fi
@@ -865,8 +865,8 @@ then
 else
     echo "${cM}    [ ]${cn} 110: Teamviewer";
 fi
-echo "Otros comandos: bebianapt - Intala las aplicaciones de la maqueta"
-echo "bebian en un debia instalado desde cero"
+echo "Otros comandos: bebianapt - Intala las parilaciones de la maqueta"
+echo "en un debia instalado desde cero"
 echo
 echo "${cM}    INTRO: Menu 1 | \c";
 fi
@@ -1050,7 +1050,6 @@ echo
 echo
 echo "${cM}    INTRO: Menu 1 (serv.) | 0: Menu 0 | \c";
 fi
-
 
 ##fin menus
 
@@ -4399,7 +4398,6 @@ su usuario -C "echo  > /home/usuario/.bash_history"
 rm /home/usuario/.bash_history
 touch /home/usuario/.bash_history
 su usuario -C 'history -c'
-history -c
 clear
 echo "Borrado!. Reinicia el equipo.";
 sleep 2
@@ -4792,8 +4790,8 @@ then
 	echo "[Desktop Entry]" > /home/usuario/Escritorio/cocodrile.desktop
 	echo "Name=Crocodrile">> /home/usuario/Escritorio/cocodrile.desktop
 	echo "Comment=">> /home/usuario/Escritorio/cocodrile.desktop
-	echo "Exec=wine /home/usuario/wine/coco/CROCCLIP.EXE">> /home/usuario/Escritorio/cocodrile.desktop
-	echo "Icon=/home/usuario/wine/coco/icon48.png">> /home/usuario/Escritorio/cocodrile.desktop
+	echo "Exec=wine /home/usuario/wine/coco/CROCCLIP.EXE">> /usr/share/applications/cocodrile.desktop
+	echo "Icon=/home/usuario/wine/coco/icon48.png">> /usr/share/applications/cocodrile.desktop
 	echo "Terminal=false">> /home/usuario/Escritorio/cocodrile.desktop
 	echo "Type=Application">> /home/usuario/Escritorio/cocodrile.desktop
 	chmod 777 /home/usuario/Escritorio/cocodrile.desktop
@@ -6414,15 +6412,6 @@ clear;
 echo "Menu servidores";
 sleep 1
 menu=700;
-clear;
-;;
-
-##Opcion extra
-extra)
-clear;
-echo "Menu extra";
-sleep 1
-menu=900;
 clear;
 ;;
 
