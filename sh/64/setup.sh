@@ -1077,47 +1077,6 @@ if [ "$menu" = "901" ]
 then
 echo "(servidores usuarios)";
 echo
-if [ "$opcion911" = "1" ]
-then
-    echo "${cv}    [x]${cn} 911: Crear usuario.${cn}";
-else
-    echo "${cM}    [ ]${cn} 911: Crear usuario.";
-fi
-
-if [ "$opcion912" = "1" ]
-then
-    echo "${cv}    [x]${cn} 912: Crear grupo usuarios.${cn}";
-else
-    echo "${cM}    [ ]${cn} 912: Crear grupo usuarios.";
-fi
-
-if [ "$opcion913" = "1" ]
-then
-    echo "${cv}    [x]${cn} 913: Asignar grupo a usuario.${cn}";
-else
-    echo "${cM}    [ ]${cn} 713: Asignar grupo a usuario.";
-fi
-
-if [ "$opcion914" = "1" ]
-then
-    echo "${cv}    [x]${cn} 914: Mover usuario a un grupo.${cn}";
-else
-    echo "${cM}    [ ]${cn} 914: Mover usuario a un grupo.";
-fi
-
-if [ "$opcion715" = "1" ]
-then
-    echo "${cv}    [x]${cn} 915: Crear password a usuario Samba.${cn}";
-else
-    echo "${cM}    [ ]${cn} 915: Crear password a usuario Samba.";
-fi
-
-if [ "$opcion719" = "1" ]
-then
-    echo "${cv}    [x]${cn} 719: Instalar Gestor VISUAL de usuarios.${cn}";
-else
-    echo "${cM}    [ ]${cn} 719: Instalar Gestor VISUAL de usuarios.";
-fi
 echo
 echo
 echo
