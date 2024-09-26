@@ -1059,16 +1059,15 @@ if [ "$menu" = "900" ]
 then
 echo "(otros comandos)";
 echo
-echo
-echo
 echo "backuptic - Crea un backup del perfil usuario.";
 echo "restaurartic - Restaura la copia de backuptic";
 echo "congelar - Restaura el backuptic en cada reinicio";
-echo "wifi - Intala los drivers de las tarjetas wifi (necesita LAN)";
-echo "bebianapt - Intala las aplicaciones de la maqueta EDIXGAL";
-echo "fullapt - Instala todas las aplicaicones de ABALAR";
-echo
-echo
+echo "bebianapt - Convierte una instalacion limpia en la maqueta BEBIAN (programas EDIXGAL)";
+echo "fullapt - Instala todas las aplicaciones de ABALAR";
+echo "speaker - Realiza un test de altavoces";
+echo "limpia - Borra los historiales del terminal";
+echo "kill - Termina una aplicación o proceso";
+echo "swap - Repara la signacion de la particion swap";
 echo
 echo "${cM}    INTRO: Menu2 (otros) | 0: Menu 0 | \c";
 fi
@@ -1080,9 +1079,12 @@ echo "(otros aplicaciones)";
 echo
 echo
 echo
-echo "cocodrile";
-echo "pneusim";
-echo "flsim";
+echo "cocodrile - Instala el crocodile (y Wine)";
+echo "pneusim - Instala el pneusim (y Wine)";
+echo "flsim - Instala el fluidsim (y Wine)";
+echo
+echo
+echo
 echo
 echo
 echo "${cM}    INTRO: Menu 3 (otros) | 0: Menu 0 | \c";
@@ -1091,9 +1093,11 @@ fi
 ##menu902
 if [ "$menu" = "902" ]
 then
-echo "(otros )";
+echo "(otros Drivers)";
 echo
-echo
+echo "wifi - Intala los drivers de las tarjetas wifi (necesita LAN)";
+echo "broadcom - Instala drivers broadcom";
+echo "nvidia - Instala drivers graficas nvidia";
 echo
 echo
 echo
@@ -6233,7 +6237,7 @@ opcion88="1";
 
 ##########DRIVERS##########
 
-##Opcion nvidia
+##Opcion broadcom
 broadcom)
 apt-get install linux-image-$(uname -r|sed 's,[^-]*-[^-]*-,,') linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') broadcom-sta-dkms
 apt-get install -f
