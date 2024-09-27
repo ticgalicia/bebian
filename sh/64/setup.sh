@@ -1098,7 +1098,7 @@ echo
 echo "wifi - Intala los drivers de las tarjetas wifi (necesita LAN)";
 echo "broadcom - Instala drivers broadcom";
 echo "nvidia - Instala drivers graficas nvidia";
-echo
+echo "hplip - Instala drivers para impresoras HP";
 echo
 echo
 echo
@@ -1110,12 +1110,12 @@ fi
 ##menu903
 if [ "$menu" = "903" ]
 then
-echo "(otros)";
+echo "(otros herramientas)";
 echo
 
 menu=899;
-echo
-echo
+echo "clonezilla - Instala el clonezilla.";
+echo "mc - Instala un visor de estructura de archivos que permite abrirlos";
 echo
 echo
 echo
@@ -5819,23 +5819,12 @@ read pausa;
 ;;
 
 
-##Opcion util
-util)
+##Opcion clonezilla
+clonezilla)
 clear;
-echo "HERRAMIENTAS DISPONIBLES DESARROLLADORES:";
+echo "Instalando clonezilla...";
 echo
-echo "mc - Instala un visor de estructura de archivos que permite abrirlos";
-echo "";
-echo "";
-echo "anydesk - Control remoto";
-echo 
-echo
-echo
-echo
-echo
-echo
-echo "Pulsa ENTER...\c";
-read pausa;
+apt-get install clonezilla -y
 ;;
 
 ##Opcion q
@@ -5985,9 +5974,6 @@ echo "${ca}Hecho!${cn}";
 sleep 2
 clear;
 ;;
-
-
-
 
 ##Opcion bloquear redes
 bloquearredes)
