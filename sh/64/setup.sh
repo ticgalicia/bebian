@@ -4910,7 +4910,7 @@ sleep 1
 	cp /home/usuario/wine/accesos/* /home/usuario/Escritorio/
 	clear
 	echo "${ca}Hecho!${cn}";
-	rm pn.tar.*
+	rm pn.tar.gz
 
 	echo "[Desktop Entry]" > /usr/share/applications/Pnsim.desktop
 	echo "Name=Pnsim">> /usr/share/applications/Pnsim.desktop
