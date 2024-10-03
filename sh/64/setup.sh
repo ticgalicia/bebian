@@ -3507,6 +3507,7 @@ dpkg --add-architecture i386
 wget https://mega.nz/linux/repo/Debian_12/amd64/megacmd_1.7.0-4.1_amd64.deb
 dpkg -i megacmd_1.7.0-4.1_amd64.deb
 rm megacmd_1.7.0-4.1_amd64.deb
+apt-get install -y libc-ares2
 apt --fix-broken -y install
 apt-get update --fix-missing
 apt-get install -f
