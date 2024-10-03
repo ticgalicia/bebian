@@ -1116,7 +1116,7 @@ echo
 menu=899;
 echo "clonezilla - Instala el clonezilla.";
 echo "mc - Instala un visor de estructura de archivos que permite abrirlos";
-echo "dc - Double Commander, gestion de ficheros (similar total comander)"
+echo "dc - Double Commander, gestion VISUAL de ficheros (similar total comander)"
 echo
 echo
 echo
