@@ -2319,9 +2319,9 @@ opcion48="0";
 
 ##Opcion 49
 49)
-wget https://mega.nz/linux/repo/Debian_12/amd64/megacmd_1.6.3-3.1_amd64.deb
-dpkg -i megacmd_1.6.3-3.1_amd64.deb
-rm megacmd_1.6.3-3.1_amd64.deb
+wget https://mega.nz/linux/repo/Debian_12/amd64/megacmd_1.7.0-4.1_amd64.deb
+dpkg -i megacmd_1.7.0-4.1_amd64.deb
+rm megacmd_1.7.0-4.1_amd64.deb
 apt --fix-broken -y install
 apt-get update --fix-missing
 apt-get install -f
@@ -3504,9 +3504,9 @@ clear
 echo "Agradecimiento a José Ángel Araújo (CIFP FONTECARMOA) por la iniciativa de incluirlo."
 sleep 2
 dpkg --add-architecture i386
-wget https://mega.nz/linux/repo/Debian_12/amd64/megacmd_1.6.3-3.1_amd64.deb
-dpkg -i megacmd_1.6.3-3.1_amd64.deb
-rm megacmd_1.6.3-3.1_amd64.deb
+wget https://mega.nz/linux/repo/Debian_12/amd64/megacmd_1.7.0-4.1_amd64.deb
+dpkg -i megacmd_1.7.0-4.1_amd64.deb
+rm megacmd_1.7.0-4.1_amd64.deb
 apt --fix-broken -y install
 apt-get update --fix-missing
 apt-get install -f
