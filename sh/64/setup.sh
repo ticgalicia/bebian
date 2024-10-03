@@ -4943,7 +4943,7 @@ sleep 1
 	echo "Type=Application">> /usr/share/applications/Flsim.desktop
 clear
 echo "${ca}Hecho!${cn}";
-rm flsin.tar.*
+rm flsim.tar.*
 sleep 1
 opcion88="1";
 ;;
