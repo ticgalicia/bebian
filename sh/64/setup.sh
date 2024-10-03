@@ -1116,7 +1116,7 @@ echo
 menu=899;
 echo "clonezilla - Instala el clonezilla.";
 echo "mc - Instala un visor de estructura de archivos que permite abrirlos";
-echo
+echo "dc - Double Commander, gestion de ficheros (similar total comander)"
 echo
 echo
 echo
@@ -6505,6 +6505,20 @@ sleep 1
 -mc)
 echo "Borrando mc ..."
 apt-get -y remove mc
+echo "${ca}Hecho!${cn}";
+sleep 1
+;;
+
+dc)
+echo "${ca}Instalando...${cn}";
+apt-get install -y doublecmd-qt
+echo "${ca}Hecho!${cn}";
+sleep 1
+;;
+
+-dc)
+echo "${ca}Borrando...${cn}";
+apt-get remove -y doublecmd-qt
 echo "${ca}Hecho!${cn}";
 sleep 1
 ;;
