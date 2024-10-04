@@ -3530,6 +3530,7 @@ echo "Type=Application">> /usr/share/applications/CADe_SIMU.desktop
 echo "${ca}Creando permisos...${cn}";
 chmod 777 /home/usuario/wine/ -R
 chmod 777 /home/usuario/Escritorio/CADe_SIMU.desktop;
+rm CADe_SIMU.tar.gz
 echo "${ca}Hecho!${cn}";
 sleep 1
 opcion97="1";
