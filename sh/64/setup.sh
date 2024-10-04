@@ -3509,11 +3509,11 @@ apt-get -qq update
 apt-get -y install wine32
 echo "${ca}Descargando del repositorio...${cn}";
 wget $REPOSITORIO/repository/CADe_SIMU.tar.gz
-tar -xf coco.tar.gz -C /home/usuario
+tar -xf CADe_SIMU.tar.gz -C /home/usuario/wine
 apt --fix-broken -y install
 echo "${ca}Creando accesos...${cn}";	
 echo "[Desktop Entry]" > /home/usuario/Escritorio/CADe_SIMU.desktop
-echo "Name=Crocodrile">> /home/usuario/Escritorio/CADe_SIMU.desktop
+echo "Name=CADe_SIMU">> /home/usuario/Escritorio/CADe_SIMU.desktop
 echo "Comment=">> /home/usuario/Escritorio/CADe_SIMU.desktop
 echo "Exec=wine /home/usuario/wine/CADe_SIMU/CADe_SIMU.EXE">> /usr/share/applications/CADe_SIMU.desktop
 echo "Icon=applications-electronics">> /usr/share/applications/CADe_SIMU.desktop
@@ -3521,7 +3521,7 @@ echo "Terminal=false">> /home/usuario/Escritorio/CADe_SIMU.desktop
 echo "Type=Application">> /home/usuario/Escritorio/CADe_SIMU.desktop
 chmod 777 /home/usuario/Escritorio/CADe_SIMU.desktop
 echo "[Desktop Entry]" > /usr/share/applications/CADe_SIMU.desktop
-echo "Name=Crocodrile">> /usr/share/applications/CADe_SIMU.desktop
+echo "Name=CADe_SIMU">> /usr/share/applications/CADe_SIMU.desktop
 echo "Comment=">> /usr/share/applications/CADe_SIMU.desktop
 echo "Exec=wine /home/usuario/wine/CADe_SIMU/CADe_SIMU.EXE">> /usr/share/applications/CADe_SIMU.desktop
 echo "Icon=applications-electronics">> /usr/share/applications/CADe_SIMU.desktop
