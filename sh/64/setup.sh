@@ -5359,7 +5359,6 @@ apt-get -y install kalgebra
 apt-get -y install kalzium
 apt-get -y install marble
 apt-get -y install step
-apt-get -y install ktuberling
 
 ## ACCESORIOS ##
 apt-get -y install nautilus
