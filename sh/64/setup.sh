@@ -1078,7 +1078,7 @@ if [ "$menu" = "901" ]
 then
 echo "(otros aplicaciones)";
 echo
-echo
+echo "32bits - Instala compatibilidad con sistemas 32 bits";
 echo
 echo "cocodrile - Instala el crocodile (y Wine)";
 echo "pneusim - Instala el pneusim (y Wine)";
