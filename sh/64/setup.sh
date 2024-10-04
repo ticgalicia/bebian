@@ -4820,13 +4820,27 @@ opcion88="1";
 ;;
 
 ##Opcion 88
-fondo)
+fondo12)
 echo "${ca}Descargando...${cn}";
 sleep 1
-wget $REPOSITORIO/background/desktop-background1024.png
-mv fondo.png /home/usuario/
+wget $REPOSITORIO/background/fondo12.png
+mv fondo12.png /home/usuario/
 clear
-su usuario -c 'xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s /home/usuario/fondo.png'
+su usuario -c 'xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s /home/usuario/fondo12.png'
+clear
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion88="1";
+;;
+
+##Opcion 88
+fondo11)
+echo "${ca}Descargando...${cn}";
+sleep 1
+wget $REPOSITORIO/background/fondo11.png
+mv fondo11.png /home/usuario/
+clear
+su usuario -c 'xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s /home/usuario/fondo11.png'
 clear
 echo "${ca}Hecho!${cn}";
 sleep 1
