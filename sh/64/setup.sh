@@ -3508,6 +3508,8 @@ echo "${ca}Instalando Wine...${cn}";
 dpkg --add-architecture i386
 apt-get -qq update
 apt-get -y install wine32
+mkdir /home/usuario/wine/
+chmod 777 /home/usuario/wine/ -R
 echo "${ca}Descargando del repositorio...${cn}";
 wget $REPOSITORIO/repository/CADe_SIMU.tar.gz
 tar -xf CADe_SIMU.tar.gz -C /home/usuario/wine
