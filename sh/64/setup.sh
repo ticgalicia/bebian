@@ -3503,31 +3503,31 @@ sleep 3
 clear
 echo "Agradecimiento a José Ángel Araújo (CIFP FONTECARMOA) por la iniciativa de incluirlo."
 sleep 2
+echo "${ca}Instalando Wine...${cn}";
 dpkg --add-architecture i386
-wget https://mega.nz/linux/repo/Debian_12/amd64/megacmd_1.7.0-4.1_amd64.deb
-dpkg -i megacmd_1.7.0-4.1_amd64.deb
-rm megacmd_1.7.0-4.1_amd64.deb
-apt-get install -y libc-ares2
+apt-get -qq update
+apt-get -y install wine32
+echo "${ca}Descargando del repositorio...${cn}";
+wget $REPOSITORIO/repository/CADe_SIMU.tar.gz
+tar -xf coco.tar.gz -C /home/usuario
 apt --fix-broken -y install
-apt-get update --fix-missing
-apt-get install -f
-apt-get remove
-apt -y autoremove
-apt-get update
-apt-get install wine32
-mkdir /home/usuario/wine/
-mega-get https://mega.nz/folder/hBgSTKiD#ISyC9foVGxhAayb-wKYmBQ /home/usuario/wine/
-
-echo "[Desktop Entry]" > /home/usuario/Escritorio/CADe_SIMU.desktop;
-echo "Version=4" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
-echo "Type=Application" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
-echo "Name=CADe_SIMU" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
-echo "Comment=" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
-echo "Exec= wine CADe_SIMU.exe" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
-echo "Icon=applications-electronics" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
-echo "Path=/home/usuario/wine/CADe_SIMU/" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
-echo "Terminal=false" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
-echo "StartupNotify=false" >> /home/usuario/Escritorio/CADe_SIMU.desktop;
+echo "${ca}Creando accesos...${cn}";	
+echo "[Desktop Entry]" > /home/usuario/Escritorio/CADe_SIMU.desktop
+echo "Name=Crocodrile">> /home/usuario/Escritorio/CADe_SIMU.desktop
+echo "Comment=">> /home/usuario/Escritorio/CADe_SIMU.desktop
+echo "Exec=wine /home/usuario/wine/CADe_SIMU/CADe_SIMU.EXE">> /usr/share/applications/CADe_SIMU.desktop
+echo "Icon=applications-electronics">> /usr/share/applications/CADe_SIMU.desktop
+echo "Terminal=false">> /home/usuario/Escritorio/CADe_SIMU.desktop
+echo "Type=Application">> /home/usuario/Escritorio/CADe_SIMU.desktop
+chmod 777 /home/usuario/Escritorio/CADe_SIMU.desktop
+echo "[Desktop Entry]" > /usr/share/applications/CADe_SIMU.desktop
+echo "Name=Crocodrile">> /usr/share/applications/CADe_SIMU.desktop
+echo "Comment=">> /usr/share/applications/CADe_SIMU.desktop
+echo "Exec=wine /home/usuario/wine/CADe_SIMU/CADe_SIMU.EXE">> /usr/share/applications/CADe_SIMU.desktop
+echo "Icon=applications-electronics">> /usr/share/applications/CADe_SIMU.desktop
+echo "Terminal=false">> /usr/share/applications/CADe_SIMU.desktop
+echo "Type=Application">> /usr/share/applications/CADe_SIMU.desktop
+echo "${ca}Creando permisos...${cn}";
 chmod 777 /home/usuario/wine/ -R
 chmod 777 /home/usuario/Escritorio/CADe_SIMU.desktop;
 echo "${ca}Hecho!${cn}";
