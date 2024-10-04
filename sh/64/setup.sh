@@ -46,7 +46,7 @@ echo $1;
 
 ##PARAMETROS DEL SCRIPT:
 stty cols 132 rows 28
-version=3.13.09.24
+version=3.04.10.24
 RUTASCRIPT=$(readlink -f $0);
 DIRECTORIO=$(cd "$(dirname "$0")"; pwd -P);
 REPOSITORIO="https://raw.githubusercontent.com/ticgalicia/bebian/master";
@@ -4944,10 +4944,17 @@ sleep 1
 	apt-get -y install wine32
 	wget $REPOSITORIO/repository/pn.tar.gz
 	tar -xf pn.tar.gz -C /home/usuario
-	cp /home/usuario/wine/accesos/* /home/usuario/Escritorio/
 	clear
 	echo "${ca}Hecho!${cn}";
 	rm pn.tar.gz
+ 	echo "[Desktop Entry]" > /home/usuario/Escritorio/Pnsim.desktop
+	echo "Name=Pnsim">> /home/usuario/Escritorio/Pnsim.desktop
+	echo "Comment=">> /home/usuario/Escritorio/Pnsim.desktop
+	echo "Exec=wine /home/usuario/wine/Pneusim/PneusimP.EXE">> /home/usuario/Escritorio/Pnsim.desktop
+	echo "Icon=/home/usuario/wine/Pneusim/icon48.png">> /home/usuario/Escritorio/Pnsim.desktop
+	echo "Terminal=false">> /home/usuario/Escritorio/Pnsim.desktop
+	echo "Type=Application">> /home/usuario/Escritorio/Pnsim.desktop
+	chmod 777 /home/usuario/Escritorio/Pnsim.desktop
 
 	echo "[Desktop Entry]" > /usr/share/applications/Pnsim.desktop
 	echo "Name=Pnsim">> /usr/share/applications/Pnsim.desktop
@@ -4964,23 +4971,31 @@ opcion88="1";
 flsim)
 echo "${ca}Descargando...${cn}";
 sleep 1
-	dpkg --add-architecture i386
-	apt-get -qq update
-	apt-get -y install wine32
-	wget $REPOSITORIO/repository/flsim.tar.gz
-	tar -xf flsim.tar.gz -C /home/usuario
-	cp /home/usuario/wine/accesos/* /home/usuario/Escritorio/
+dpkg --add-architecture i386
+apt-get -qq update
+apt-get -y install wine32
+wget $REPOSITORIO/repository/flsim.tar.gz
+tar -xf flsim.tar.gz -C /home/usuario
 
-	echo "[Desktop Entry]" > /usr/share/applications/Flsim.desktop
-	echo "Name=Flsim">> /usr/share/applications/Flsim.desktop
-	echo "Comment=">> /usr/share/applications/Flsim.desktop
-	echo "Exec=wine /home/usuario/wine/flsin/bin/fl_sim_p.exe">> /usr/share/applications/Flsim.desktop
-	echo "Icon=/home/usuario/wine/flsin/icon48.png">> /usr/share/applications/Flsim.desktop
-	echo "Terminal=false">> /usr/share/applications/Flsim.desktop
-	echo "Type=Application">> /usr/share/applications/Flsim.desktop
+echo "[Desktop Entry]" > /home/usuario/Escritorio/Flsim.desktop
+echo "Name=Flsim">> /home/usuario/Escritorio/Flsim.desktop
+echo "Comment=">> /home/usuario/Escritorio/Flsim.desktop
+echo "Exec=wine /home/usuario/wine/flsin/bin/fl_sim_p.exe">> /home/usuario/Escritorio/Flsim.desktop
+echo "Icon=/home/usuario/wine/flsin/icon48.png">> /home/usuario/Escritorio/Flsim.desktop
+echo "Terminal=false">> /home/usuario/Escritorio/Flsim.desktop
+echo "Type=Application">> /home/usuario/Escritorio/Flsim.desktop
+chmod 777 /home/usuario/Escritorio/Flsim.desktop
+
+echo "[Desktop Entry]" > /usr/share/applications/Flsim.desktop
+echo "Name=Flsim">> /usr/share/applications/Flsim.desktop
+echo "Comment=">> /usr/share/applications/Flsim.desktop
+echo "Exec=wine /home/usuario/wine/flsin/bin/fl_sim_p.exe">> /usr/share/applications/Flsim.desktop
+echo "Icon=/home/usuario/wine/flsin/icon48.png">> /usr/share/applications/Flsim.desktop
+echo "Terminal=false">> /usr/share/applications/Flsim.desktop
+echo "Type=Application">> /usr/share/applications/Flsim.desktop
 clear
 echo "${ca}Hecho!${cn}";
-rm flsim.tar.*
+rm flsim.tar.gz
 sleep 1
 opcion88="1";
 ;;
