@@ -1076,13 +1076,12 @@ fi
 ##menu901
 if [ "$menu" = "901" ]
 then
-echo "(otros aplicaciones)";
+echo "(otros comandos 2)";
 echo
 echo "32bits - Instala compatibilidad con sistemas 32 bits";
-echo
-echo "cocodrile - Instala el crocodile (y Wine)";
-echo "pneusim - Instala el pneusim (y Wine)";
-echo "flsim - Instala el fluidsim (y Wine)";
+echo "sources - Instala las entradas en el fichero sources";
+echo "-sources - Edita en el fichero sources";
+echo "juegos - Instala una lista de juegos";
 echo
 echo
 echo
@@ -1094,6 +1093,22 @@ fi
 ##menu902
 if [ "$menu" = "902" ]
 then
+echo "(otros aplicaciones)";
+echo
+echo "cocodrile - Instala el crocodile (y Wine)";
+echo "pneusim - Instala el pneusim (y Wine)";
+echo "flsim - Instala el fluidsim (y Wine)";
+echo
+echo
+echo
+echo
+echo
+echo "${cM}    INTRO: Menu 4 (otros) | 0: Menu 0 | \c";
+fi
+
+##menu903
+if [ "$menu" = "903" ]
+then
 echo "(otros Drivers)";
 echo
 echo "wifi - Intala los drivers de las tarjetas wifi (necesita LAN)";
@@ -1102,14 +1117,11 @@ echo "nvidia - Instala drivers graficas nvidia";
 echo "hplip - Instala drivers para impresoras HP";
 echo
 echo
-echo
-echo
-echo
-echo "${cM}    INTRO: Menu 4 (serv.) | 0: Menu 0 | \c";
+echo "${cM}    INTRO: Menu 5 (otros) | 0: Menu 0 | \c";
 fi
 
-##menu903
-if [ "$menu" = "903" ]
+##menu904
+if [ "$menu" = "904" ]
 then
 echo "(otros herramientas)";
 echo
@@ -1121,9 +1133,8 @@ echo "dc - Double Commander, gestion VISUAL de ficheros (similar total comander)
 echo
 echo
 echo
-echo "${cM}    INTRO: Menu 1 (serv.) | 0: Menu 0 | \c";
+echo "${cM}    INTRO: Menu 1 (otros) | 0: Menu 0 | \c";
 fi
-
 ##fin menus
 
 echo "a: Ayuda. | i: Informacion | q: Salir | fix: reparar${cn}";
