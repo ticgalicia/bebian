@@ -4824,14 +4824,15 @@ fondo)
 echo "${ca}Descargando...${cn}";
 sleep 1
 wget $REPOSITORIO/background/desktop-background1024.png
-mv desktop-background1024.png /home/usuario/
+mv fondo.png /home/usuario/
 clear
-su usuario -c 'xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s /home/usuario/desktop-background1024.png'
+su usuario -c 'xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s /home/usuario/fondo.png'
 clear
 echo "${ca}Hecho!${cn}";
 sleep 1
 opcion88="1";
 ;;
+
 ##Opcion 88
 fondo800)
 echo "${ca}Descargando...${cn}";
@@ -4846,6 +4847,22 @@ sleep 1
 opcion88="1";
 ;;
 
+##Opcion autologin
+autologin)
+clear
+echo "${ca}Instalando...${cn}";
+sleep 1
+esto="#autologin-user=";
+poresto="autologin-user=usuario";
+sed -i "s/$esto/$poresto/g" /etc/lightdm/lightdm.conf;
+
+esto="#autologin-user-timeout=0";
+poresto="autologin-user-timeout=0";
+sed -i "s/$esto/$poresto/g" /etc/lightdm/lightdm.conf;
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion88="1";
+;;
 
 ##Opcion 88
 cocodrile)
