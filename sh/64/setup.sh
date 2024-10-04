@@ -1063,6 +1063,7 @@ echo "backuptic - Crea un backup del perfil usuario.";
 echo "restaurartic - Restaura la copia de backuptic";
 echo "congelar - Restaura el backuptic en cada reinicio";
 echo "bebianapt - Convierte una instalacion limpia en la maqueta BEBIAN (programas EDIXGAL)";
+echo "autologin- hace que la cuenta usuario inicie automaticamente.";
 echo "fullapt - Instala todas las aplicaciones de ABALAR";
 echo "speaker - Realiza un test de altavoces";
 echo "limpia - Borra los historiales del terminal";
@@ -5413,6 +5414,8 @@ dpkg -i *.deb
 
 echo "${ca}Hecho!${cn}";
 sleep 1
+echo "${cv}El comando -autologin- hace que la cuenta usuario inicie automaticamente. ${cn}";
+sleep 5
 opcion88="1";
 ;;
 
