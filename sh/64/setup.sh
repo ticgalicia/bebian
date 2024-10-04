@@ -3515,11 +3515,12 @@ echo "${ca}Creando accesos...${cn}";
 echo "[Desktop Entry]" > /home/usuario/Escritorio/CADe_SIMU.desktop
 echo "Name=CADe_SIMU">> /home/usuario/Escritorio/CADe_SIMU.desktop
 echo "Comment=">> /home/usuario/Escritorio/CADe_SIMU.desktop
-echo "Exec=wine /home/usuario/wine/CADe_SIMU/CADe_SIMU.EXE">> /usr/share/applications/CADe_SIMU.desktop
-echo "Icon=applications-electronics">> /usr/share/applications/CADe_SIMU.desktop
+echo "Exec=wine /home/usuario/wine/CADe_SIMU/CADe_SIMU.EXE">> /home/usuario/Escritorio/CADe_SIMU.desktop
+echo "Icon=applications-electronics">> /home/usuario/Escritorio/CADe_SIMU.desktop
 echo "Terminal=false">> /home/usuario/Escritorio/CADe_SIMU.desktop
 echo "Type=Application">> /home/usuario/Escritorio/CADe_SIMU.desktop
 chmod 777 /home/usuario/Escritorio/CADe_SIMU.desktop
+
 echo "[Desktop Entry]" > /usr/share/applications/CADe_SIMU.desktop
 echo "Name=CADe_SIMU">> /usr/share/applications/CADe_SIMU.desktop
 echo "Comment=">> /usr/share/applications/CADe_SIMU.desktop
@@ -3527,6 +3528,7 @@ echo "Exec=wine /home/usuario/wine/CADe_SIMU/CADe_SIMU.EXE">> /usr/share/applica
 echo "Icon=applications-electronics">> /usr/share/applications/CADe_SIMU.desktop
 echo "Terminal=false">> /usr/share/applications/CADe_SIMU.desktop
 echo "Type=Application">> /usr/share/applications/CADe_SIMU.desktop
+
 echo "${ca}Creando permisos...${cn}";
 chmod 777 /home/usuario/wine/ -R
 chmod 777 /home/usuario/Escritorio/CADe_SIMU.desktop;
@@ -4864,8 +4866,8 @@ then
 	echo "[Desktop Entry]" > /home/usuario/Escritorio/cocodrile.desktop
 	echo "Name=Crocodrile">> /home/usuario/Escritorio/cocodrile.desktop
 	echo "Comment=">> /home/usuario/Escritorio/cocodrile.desktop
-	echo "Exec=wine /home/usuario/wine/coco/CROCCLIP.EXE">> /usr/share/applications/cocodrile.desktop
-	echo "Icon=/home/usuario/wine/coco/icon48.png">> /usr/share/applications/cocodrile.desktop
+	echo "Exec=wine /home/usuario/wine/coco/CROCCLIP.EXE">> /home/usuario/Escritorio/cocodrile.desktop
+	echo "Icon=/home/usuario/wine/coco/icon48.png">> /home/usuario/Escritorio/cocodrile.desktop
 	echo "Terminal=false">> /home/usuario/Escritorio/cocodrile.desktop
 	echo "Type=Application">> /home/usuario/Escritorio/cocodrile.desktop
 	chmod 777 /home/usuario/Escritorio/cocodrile.desktop
