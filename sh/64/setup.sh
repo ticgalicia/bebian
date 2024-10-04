@@ -1077,12 +1077,12 @@ fi
 if [ "$menu" = "901" ]
 then
 echo "(otros comandos 2)";
-echo
+echo "hplip - Instala compatibilidad con impresoras HP";
 echo "32bits - Instala compatibilidad con sistemas 32 bits";
 echo "sources - Instala las entradas en el fichero sources";
 echo "-sources - Edita en el fichero sources";
 echo "juegos - Instala una lista de juegos";
-echo
+echo "extra - completar con aplicaciones EDIXGAL";
 echo
 echo
 echo
@@ -1115,7 +1115,7 @@ echo "wifi - Intala los drivers de las tarjetas wifi (necesita LAN)";
 echo "broadcom - Instala drivers broadcom";
 echo "nvidia - Instala drivers graficas nvidia";
 echo "hplip - Instala drivers para impresoras HP";
-echo
+echo  "multiclass - Software y drivers Multiclass";
 echo
 echo "${cM}    INTRO: Menu 5 (otros) | 0: Menu 0 | \c";
 fi
