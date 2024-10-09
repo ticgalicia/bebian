@@ -1077,7 +1077,7 @@ fi
 if [ "$menu" = "901" ]
 then
 echo "(otros comandos 2)";
-echo "hplip - Instala compatibilidad con impresoras HP";
+echo " - Instala compatibilidad con impresoras HP";
 echo "32bits - Instala compatibilidad con sistemas 32 bits";
 echo "sources - Instala las entradas en el fichero sources";
 echo "-sources - Edita en el fichero sources";
@@ -1114,7 +1114,7 @@ echo
 echo "wifi - Intala los drivers de las tarjetas wifi (necesita LAN)";
 echo "broadcom - Instala drivers broadcom";
 echo "nvidia - Instala drivers graficas nvidia";
-echo "hplip - Instala drivers para impresoras HP";
+echo "hplip - Instala drivers para impresoras HP (Debian 12)";
 echo  "multiclass - Software y drivers Multiclass";
 echo
 echo "${cM}    INTRO: Menu 5 (otros) | 0: Menu 0 | \c";
@@ -6396,7 +6396,7 @@ sleep 1
 ##Opcion hplip
 hplip)
 echo "${ca}Instalando...${cn}";
-if [ ! -f $REPUSB/drivers/hplip/hplip_3_17_7.run ]; then
+if [ ! -f $REPUSB/drivers/hplip/hplip_3_24_4.run ]; then
 echo "Necesita conexion internet";
 echo "Deseas continuar (S/N)?: \c";
 read continuar;
