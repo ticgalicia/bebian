@@ -1083,7 +1083,7 @@ echo "sources - Instala las entradas en el fichero sources";
 echo "-sources - Edita en el fichero sources";
 echo "juegos - Instala una lista de juegos";
 echo "extra - completar con aplicaciones EDIXGAL";
-echo
+echo "deposito - Para borrar el deposito de claves, dejar en blanco"
 echo
 echo
 echo
@@ -5011,6 +5011,15 @@ sleep 1
 opcion88="1";
 ;;
 
+##Opcion 88
+deposito)
+echo "${ca}Deja la contraseña en blanco para que no pida el deposito de claves.${cn}";
+sleep 2
+rm /home/usuario/.local/share/keyrings/login.keyring
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion88="1";
+;;
 
 
 ##Opcion 66
