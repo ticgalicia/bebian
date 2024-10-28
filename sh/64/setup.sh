@@ -6321,6 +6321,20 @@ sleep 1
 opcion88="1";
 ;;
 
+##Opcion ati
+ati)
+echo "${ca}Descargando...${cn}";
+sleep 1
+apt purge '*nvidia*'
+apt update
+#apt-get -y install firmware-amd-graphics libgl1-mesa-dri libglx-mesa0 mesa-vulkan-drivers xserver-xorg-video-allapt-get install firmware-amd-graphics libgl1-mesa-dri libglx-mesa0 mesa-vulkan-drivers xserver-xorg-video-all
+apt-get install firmware-amd-graphics libgl1-mesa-dri libglx-mesa0 mesa-vulkan-drivers xserver-xorg-video-all
+clear
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion88="1";
+;;
+
 ##Opcion wn725n
 wn725n)
 echo "${ca}Instalando...${cn}";
