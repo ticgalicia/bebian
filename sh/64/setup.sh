@@ -2221,7 +2221,7 @@ then
 	sleep 1
 	#wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Player-Full-17.5.1-23298084.x86_64.bundle
 	chmod +x VMware-Player-Full-17.5.1-23298084.x86_64.bundle
-	chmod ./VMware-Player-Full-17.5.1-23298084.x86_64.bundle
+	sh ./VMware-Player-Full-17.5.1-23298084.x86_64.bundle
 	#rm VMware-Player-Full-17.5.1-23298084.x86_64.bundle
 fi
 sleep 2
