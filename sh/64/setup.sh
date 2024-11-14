@@ -444,6 +444,12 @@ then
 else
     echo "${cM}    [ ]${cn} 42: Instalar virtualbox-5.2.";
 fi
+if [ "$opcion42b" = "1" ]
+then
+    echo "${cv}    [x]${cn} 42b: Instalar VMwareplayer 17.${cn}";
+else
+    echo "${cM}    [ ]${cn} 42b: Instalar VMwareplayer 17.";
+fi
 if [ "$opcion43" = "1" ]
 then
     echo "${cv}    [x]${cn} 43: Instalar ARK descompresor RAR${cn}";
@@ -480,7 +486,6 @@ then
 else
     echo "${cM}    [ ]${cn} 49: Instalar MEGA download.";
 fi
-echo
 echo
 echo
 echo
@@ -2203,6 +2208,26 @@ sleep 2
 echo "${ca}Hecho!${cn}";
 sleep 1
 opcion42="1";
+;;
+
+##Opcion 42b
+42b)
+
+if [ "$VTIPO" = "x86_64" ]
+then
+	clear
+	echo "${ca}El proceso llevara tiempo 400Mb...${cn}";
+	sleep 1
+	echo "${ca}Instalando...${cn}";
+	sleep 1
+	wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Player-Full-17.5.1-23298084.x86_64.bundle
+	chmod +x VMware-Player-Full-17.5.1-23298084.x86_64.bundle
+	rm virtualbox-6.1_6.1.22-144080~Debian~buster_amd64.deb
+fi
+sleep 2
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion42b="1";
 ;;
 
 ##Opcion 43
