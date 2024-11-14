@@ -2231,6 +2231,8 @@ fi
 sleep 2
 echo "${ca}Hecho!${cn}";
 sleep 1
+echo "${ca}No te olvides de crear el link de acceso!${cn}";
+sleep 1
 opcion42b="1";
 ;;
 
