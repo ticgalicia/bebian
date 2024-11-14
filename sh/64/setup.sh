@@ -2212,7 +2212,6 @@ opcion42="1";
 
 ##Opcion 42b
 42b)
-
 if [ "$VTIPO" = "x86_64" ]
 then
 	clear
@@ -2220,9 +2219,10 @@ then
 	sleep 1
 	echo "${ca}Instalando...${cn}";
 	sleep 1
-	wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Player-Full-17.5.1-23298084.x86_64.bundle
+	#wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Player-Full-17.5.1-23298084.x86_64.bundle
 	chmod +x VMware-Player-Full-17.5.1-23298084.x86_64.bundle
-	rm virtualbox-6.1_6.1.22-144080~Debian~buster_amd64.deb
+	chmod ./VMware-Player-Full-17.5.1-23298084.x86_64.bundle
+	#rm VMware-Player-Full-17.5.1-23298084.x86_64.bundle
 fi
 sleep 2
 echo "${ca}Hecho!${cn}";
