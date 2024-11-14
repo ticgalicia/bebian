@@ -2217,12 +2217,16 @@ then
 	clear
 	echo "${ca}El proceso llevara tiempo 400Mb...${cn}";
 	sleep 1
-	echo "${ca}Instalando...${cn}";
+	echo "${ca}Decargando...${cn}";
 	sleep 1
 	#wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Player-Full-17.5.1-23298084.x86_64.bundle
 	chmod +x VMware-Player-Full-17.5.1-23298084.x86_64.bundle
+ 	echo "${ca}Instalando...${cn}";
+	sleep 1
 	sh ./VMware-Player-Full-17.5.1-23298084.x86_64.bundle
-	#rm VMware-Player-Full-17.5.1-23298084.x86_64.bundle
+	echo "${ca}Borrando...${cn}";
+	sleep 1
+	rm VMware-Player-Full-17.5.1-23298084.x86_64.bundle
 fi
 sleep 2
 echo "${ca}Hecho!${cn}";
