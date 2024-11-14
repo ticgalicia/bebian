@@ -2223,6 +2223,7 @@ then
 	chmod +x VMware-Player-Full-17.5.1-23298084.x86_64.bundle
  	echo "${ca}Instalando...${cn}";
 	sleep 1
+ 	apt install -y build-essential linux-headers-$(uname -r)
 	sh ./VMware-Player-Full-17.5.1-23298084.x86_64.bundle
 	echo "${ca}Borrando...${cn}";
 	sleep 1
