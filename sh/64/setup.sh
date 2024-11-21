@@ -2219,7 +2219,7 @@ then
 	sleep 1
 	echo "${ca}Decargando...${cn}";
 	sleep 1
-	#wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Player-Full-17.5.1-23298084.x86_64.bundle
+	wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Player-Full-17.5.1-23298084.x86_64.bundle
 	chmod +x VMware-Player-Full-17.5.1-23298084.x86_64.bundle
  	echo "${ca}Instalando...${cn}";
 	sleep 1
