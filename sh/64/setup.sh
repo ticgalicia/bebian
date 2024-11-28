@@ -2237,6 +2237,16 @@ sleep 1
 opcion42b="1";
 ;;
 
+##Opcion -42b
+-42b)
+echo "${ca}Desinstalando player!${cn}";
+vmware-installer -u vmware-player
+sleep 2
+echo "${ca}Hecho!${cn}";
+sleep 1
+opciond42b="0";
+;;
+
 ##Opcion 43
 43)
 apt-get -y install ark
