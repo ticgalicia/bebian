@@ -2215,8 +2215,6 @@ opcion42="1";
 if [ "$VTIPO" = "x86_64" ]
 then
 	clear
-	echo "${ca}El proceso llevara tiempo 400Mb...${cn}";
-	sleep 1
 	echo "${ca}Decargando...${cn}";
 	sleep 1
 	#wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Player-Full-17.5.1-23298084.x86_64.bundle
