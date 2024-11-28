@@ -2232,8 +2232,8 @@ fi
 sleep 2
 echo "${ca}Hecho!${cn}";
 sleep 1
-echo "${ca}No te olvides de crear el link de acceso!${cn}";
-sleep 1
+echo "${ca}No te olvides clicar el acceso del escritorio para la configuracion previa!${cn}";
+sleep 3
 opcion42b="1";
 ;;
 
