@@ -2210,6 +2210,9 @@ sleep 1
 opcion42="1";
 ;;
 
+
+VMware_17.5.1_Linux.bundle
+
 ##Opcion 42b
 42b)
 if [ "$VTIPO" = "x86_64" ]
@@ -2219,7 +2222,8 @@ then
 	sleep 1
 	echo "${ca}Decargando...${cn}";
 	sleep 1
-	wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Player-Full-17.5.1-23298084.x86_64.bundle
+	#wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Player-Full-17.5.1-23298084.x86_64.bundle
+ 	wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware_17.5.1_Linux.bundle
 	chmod +x VMware-Player-Full-17.5.1-23298084.x86_64.bundle
  	echo "${ca}Instalando...${cn}";
 	sleep 1
@@ -2235,6 +2239,15 @@ sleep 1
 echo "${ca}No te olvides de crear el link de acceso!${cn}";
 sleep 1
 opcion42b="1";
+;;
+
+##Opcion -42b
+-42b)
+vmware-installer -u vmware-workstation
+sleep 2
+echo "${ca}Hecho!${cn}";
+sleep 1
+opciond42b="0";
 ;;
 
 ##Opcion 43
