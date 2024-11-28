@@ -2210,9 +2210,6 @@ sleep 1
 opcion42="1";
 ;;
 
-
-VMware_17.5.1_Linux.bundle
-
 ##Opcion 42b
 42b)
 if [ "$VTIPO" = "x86_64" ]
@@ -2222,17 +2219,15 @@ then
 	sleep 1
 	echo "${ca}Decargando...${cn}";
 	sleep 1
-	#wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Workstation-17.5.1-23298084.x86_64.bundle
- 	wget https://softwareupdate.vmware.com/cds/vmw-desktop/ws/17.5.1/23298084/linux/core/VMware-Workstation-17.5.1-23298084.x86_64.bundle.tar
-  	tar -xvf VMware-Workstation-17.5.1-23298084.x86_64.bundle.tar
-	chmod +x VMware-Workstation-17.5.1-23298084.x86_64.bundle
+	wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Player-Full-17.5.1-23298084.x86_64.bundle
+	chmod +x VMware-Player-Full-17.5.1-23298084.x86_64.bundle
  	echo "${ca}Instalando...${cn}";
 	sleep 1
  	apt install -y build-essential linux-headers-$(uname -r)
-	sh ./VMware-Workstation-17.5.1-23298084.x86_64.bundle
+	sh ./VMware-Player-Full-17.5.1-23298084.x86_64.bundle
 	echo "${ca}Borrando...${cn}";
 	sleep 1
-	rm VMware-Workstation-17.5.1-23298084.x86_64.bundle
+	rm VMware-Player-Full-17.5.1-23298084.x86_64.bundle
 fi
 sleep 2
 echo "${ca}Hecho!${cn}";
@@ -2241,8 +2236,6 @@ echo "${ca}No te olvides de crear el link de acceso!${cn}";
 sleep 1
 opcion42b="1";
 ;;
-
-#vmware-installer -u vmware-player
 
 ##Opcion 43
 43)
