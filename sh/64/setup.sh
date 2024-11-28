@@ -2243,7 +2243,8 @@ opcion42b="1";
 
 ##Opcion -42b
 -42b)
-vmware-installer -u vmware-workstation
+echo "${ca}Desinstalando player!${cn}";
+vmware-installer -u vmware-player
 sleep 2
 echo "${ca}Hecho!${cn}";
 sleep 1
