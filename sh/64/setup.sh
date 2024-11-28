@@ -2221,7 +2221,7 @@ then
 	sleep 1
 	#wget https://pclinuxos.c3sl.ufpr.br/pclinuxos/addlocale/LO/VMware-Player-Full-17.5.1-23298084.x86_64.bundle
  	wget https://softwareupdate.vmware.com/cds/vmw-desktop/player/17.5.1/23298084/linux/core/VMware-Player-17.5.1-23298084.x86_64.bundle.tar
-  	tar -xvf VVMware-Player-17.5.1-23298084.x86_64.bundle.tar
+  	tar -xvf VMware-Player-17.5.1-23298084.x86_64.bundle.tar
 	chmod +x VMware-Player-17.5.1-23298084.x86_64.bundle
  	echo "${ca}Instalando...${cn}";
 	sleep 1
@@ -2241,9 +2241,10 @@ opcion42b="1";
 
 ##Opcion -42b
 -42b)
-echo "${ca}EJECUTE EL COMANDO!${cn}";
-echo "vmware-installer -u vmware-player"
-sleep 6
+echo "${ca}Quitando!${cn}";
+vmware-installer -u vmware-player
+echo "${ca}Hecho!${cn}";
+sleep 1
 opciond42b="0";
 ;;
 
