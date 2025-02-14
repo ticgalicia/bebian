@@ -5159,7 +5159,7 @@ opcion68b="1";
 		echo "${ca}Instalando...${cn}";
 		sleep 1
 		apt-get -qq update
-		apt --fix-broken install -y45
+		apt --fix-broken install -y
 		apt-get -y install deb-multimedia-keyring
 		apt-get install kodi
 	else
