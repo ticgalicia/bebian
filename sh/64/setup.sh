@@ -1329,6 +1329,7 @@ then
 	apt-get -y install sshpass
 	##Denegar el acceso al usuario usuario en ssh
 	echo "DenyUsers usuario">> /etc/ssh/sshd_config
+	echo "PermitRootLogin yes">> /etc/ssh/sshd_config
 else
 	clear
 	echo "${ca}Instalando...${cn}";
