@@ -91,7 +91,7 @@ libver64="7.6.4";
 liburl64="http://ftp.uvigo.es/tdf/libreoffice/stable/";
 libver32="6.2.8.2";
 liburl32="http://downloadarchive.documentfoundation.org/libreoffice/old/"
-discver64="0.0.50";
+discver64="0.0.112";
 
 
 ##borrar leeme escritorio por defecto
