@@ -2154,11 +2154,12 @@ then
 	clear
  	echo "${ca}Instalando...${cn}";
   	sleep 1
-   	wget --user-agent="Mozilla" https://estaticos.redsara.es/comunes/autofirma/currentversion/AutoFirma_Linux_Debian.zip
-  	apt install openjdk-11-jre -y
-  	unzip AutoFirma_Linux_Debian.zip -d /root/
-   	dpkg -i AutoFirma_1_8_2.deb
-	rm AutoFirma_*
+   	wget --user-agent="Mozilla" https://firmaelectronica.gob.es/content/dam/firmaelectronica/descargas-software/autofirma19/Autofirma_Linux_Debian.zip
+  	#apt install openjdk-11-jre -y
+	apt install default-jre -y
+  	unzip Autofirma_Linux_Debian.zip -d /root/
+   	dpkg -i autofirma_1_9.deb
+	rm autofirma_*
 	apt --fix-broken -y install
 else
 	echo "${ca}No hay soporte para x32${cn}";
