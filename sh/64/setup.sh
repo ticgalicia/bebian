@@ -1117,7 +1117,7 @@ then
 echo "(otros Drivers)";
 echo
 echo "wifi - Intala los drivers de las tarjetas wifi (necesita LAN)";
-echo "blue - Instala drivers bluetooth (necesita LAN)";
+echo "bluez - Instala funcionalidad bluetooth (necesita LAN)";
 echo "broadcom - Instala drivers broadcom";
 echo "nvidia - Instala drivers graficas nvidia";
 echo "hplip - Instala drivers para impresoras HP (Debian 12)";
