@@ -1089,8 +1089,8 @@ echo "-sources - Edita en el fichero sources";
 echo "juegos - Instala una lista de juegos";
 echo "extra - completar con aplicaciones EDIXGAL";
 echo "deposito - Para borrar el deposito de claves, dejar en blanco"
-echo
-echo
+echo 
+echo 
 echo
 echo "${cM}    INTRO: Menu 3 (otros) | 0: Menu 0 | \c";
 fi
@@ -1117,11 +1117,12 @@ then
 echo "(otros Drivers)";
 echo
 echo "wifi - Intala los drivers de las tarjetas wifi (necesita LAN)";
+echo "blue - Instala drivers bluetooth (necesita LAN)";
 echo "broadcom - Instala drivers broadcom";
 echo "nvidia - Instala drivers graficas nvidia";
 echo "hplip - Instala drivers para impresoras HP (Debian 12)";
 echo  "multiclass - Software y drivers Multiclass";
-echo
+echo 
 echo "${cM}    INTRO: Menu 5 (otros) | 0: Menu 0 | \c";
 fi
 
@@ -4988,6 +4989,22 @@ clear
 echo "${ca}Hecho!${cn}";
 sleep 1
 opcion47="1";
+;;
+
+##Opcion 88
+blue)
+Activar bluetooth
+echo "Instalando los paquetes necesarios...";
+   apt update
+   apt install bluez bluez-tools blueman
+echo "Configurando arranque del servicio";
+   systemctl enable bluetooth
+   systemctl start bluetooth
+clear
+echo "Verificando estado activo.";
+   systemctl status bluetooth
+sleep 1
+opcion88="1";
 ;;
 
 ##Opcion 88
