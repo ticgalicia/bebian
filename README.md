@@ -7,7 +7,7 @@
 ![Static Badge](https://img.shields.io/badge/Arquitectura-32%20%7C%2064%20bits-gray?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/Mantenedor-TIC_Galicia-1E3A8A?style=for-the-badge)
 
-Benvido/a á páxina oficial de scripts e recursos para a compilación (maqueta) **BEBIAN**, unha iniciativa de [www.ticgalicia.com](https://www.ticgalicia.com).
+Benvido/a á páxina oficial de scripts e recursos para a compilación (maqueta [descargar aquí]([[https://www.ticgalicia.com/2020/04/bebian-como-instalar-bebian-en-un.html]) **BEBIAN** , unha iniciativa de [www.ticgalicia.com](https://www.ticgalicia.com).
 
 Nesta sección atoparás recursos e scripts optimizados especificamente para distribucións **Linux Debian** (tanto en versións de 32 como de 64 bits).
 
