@@ -9,7 +9,7 @@
 
 Benvido/a á páxina oficial de scripts e recursos para a compilación (maqueta) **BEBIAN** , unha iniciativa de [www.ticgalicia.com](https://www.ticgalicia.com/2020/04/bebian-como-instalar-bebian-en-un.html).
 
-Nesta sección atoparás recursos e scripts optimizados especificamente para distribucións **Linux Debian** (tanto en versións de 32 como de 64 bits).
+Nesta sección atoparás recursos e scripts optimizados especificamente para distribucións **Linux Debian** (tanto en versións de 32-descontinuado- como de 64 bits).
 
 ## 🚀 Funcionalidades Principais
 * **Automatización:** Scripts de post-instalación e configuración de Debian.
