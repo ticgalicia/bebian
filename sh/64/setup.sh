@@ -3183,7 +3183,8 @@ sleep 1
 wget https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg -O /usr/share/keyrings/vscodium-archive-keyring.asc
 echo 'deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/vscodium-archive-keyring.asc ] https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs vscodium main' | sudo tee /etc/apt/sources.list.d/vscodium.list
 sudo apt update
-sudo apt install codium codium-insiders
+sudo apt install codium 
+##codium-insiders
 sleep 1
 echo "${ca}Hecho!${cn}";
 sleep 1
