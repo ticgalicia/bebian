@@ -46,7 +46,7 @@ echo $1;
 
 ##PARAMETROS DEL SCRIPT:
 stty cols 132 rows 28
-version=3.04.10.24
+version=3.24.02.26
 RUTASCRIPT=$(readlink -f $0);
 DIRECTORIO=$(cd "$(dirname "$0")"; pwd -P);
 REPOSITORIO="https://raw.githubusercontent.com/ticgalicia/bebian/master";
@@ -704,6 +704,13 @@ then
     echo "${cv}    [x]${cn} 7a: Instalar dodo & Thonny 4 .(Editor Pyton)${cn}";
 else
     echo "${cM}    [ ]${cn} 7a: Instalar dodo & Thonny 4 .(Editor Pyton).";
+fi
+echo
+if [ "$opcion7b" = "1" ]
+then
+    echo "${cv}    [x]${cn} 7b: Instalar Codium AI.(LLM)${cn}";
+else
+    echo "${cM}    [ ]${cn} 7b: Instalar Codium AI.(LLM)";
 fi
 echo
 echo "${cM}    INTRO: Menu 8 | \c";
@@ -3170,6 +3177,19 @@ sleep 1
 opcion7a="0";
 ;;
 
+7b)
+echo "${ca}Instalando...${cn}";
+sleep 1
+wget https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg -O /usr/share/keyrings/vscodium-archive-keyring.asc
+echo 'deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/vscodium-archive-keyring.asc ] https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs vscodium main'
+sudo tee /etc/apt/sources.list.d/vscodium.list
+sudo apt update
+sudo apt install codium codium-insiders
+sleep 1
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion7b="1";
+;;
 
 ##Opcion opensankore
 opensankore)
@@ -5693,6 +5713,8 @@ echo "${cv}Actualizando el Sistema espere... ${cn}";
 sleep 1
 apt-get update
 apt-get -qq -y install curl
+##Incorporamos calculadora de sistema
+apt install qalculate-gtk -y
 clear
 echo "${cv}Actualizando el configurador... ${cn}";
 sleep 1
