@@ -705,13 +705,13 @@ then
 else
     echo "${cM}    [ ]${cn} 7a: Instalar dodo & Thonny 4 .(Editor Pyton).";
 fi
-echo
 if [ "$opcion7b" = "1" ]
 then
     echo "${cv}    [x]${cn} 7b: Instalar Codium AI.(LLM)${cn}";
 else
     echo "${cM}    [ ]${cn} 7b: Instalar Codium AI.(LLM)";
 fi
+echo
 echo
 echo "${cM}    INTRO: Menu 8 | \c";
 fi
