@@ -1115,7 +1115,7 @@ echo
 echo "cocodrile - Instala el crocodile (y Wine)";
 echo "pneusim - Instala el pneusim (y Wine)";
 echo "flsim - Instala el fluidsim (y Wine)";
-echo
+echo "ardora - Instala Ardora10";
 echo
 echo
 echo
