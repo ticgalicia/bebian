@@ -5620,6 +5620,7 @@ apt-get -y install shotwell
 apt-get -y install simple-scan
 apt-get -y install synfigstudio
 apt-get -y install openscad
+apt-get -y install kolourpaint
 
 ## ELECTRONICA
 
@@ -5752,6 +5753,7 @@ apt-get update
 apt-get -qq -y install curl
 ##Incorporamos calculadora de sistema
 apt install qalculate-gtk -y
+apt-get -y install kolourpaint
 clear
 echo "${cv}Actualizando el configurador... ${cn}";
 sleep 1
