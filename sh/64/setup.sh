@@ -783,6 +783,12 @@ then
 else
     echo "${cM}    [ ]${cn} 94: EasyEDA CREAR placas circuitos Electronicos..";
 fi
+if [ "$opcion94" = "1" ]
+then
+    echo "${cv}    [x]${cn} 94b: Lepton EDA CREAR placas circuitos Electronicos.${cn}";
+else
+    echo "${cM}    [ ]${cn} 94b: Lepton EDA CREAR placas circuitos Electronicos..";
+fi
 if [ "$opcion95" = "1" ]
 then
     echo "${cv}    [x]${cn} 95: KICAD CREAR placas circuitos Electronicos.${cn}";
@@ -801,7 +807,6 @@ then
 else
     echo "${cM}    [ ]${cn} 97: CADe_SIMU diseño Industrial Electricidad (Bebian 12).";
 fi
-echo
 echo
 echo
 echo
@@ -3553,6 +3558,16 @@ sleep 1
 opcion94="1";
 ;;
 
+##Opcion 94b
+94b)
+echo "${ca}Instalando...${cn}";
+sleep 1
+apt-get -y install lepton-eda
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion94="1";
+;;
+
 ##Opcion 95
 95)
 echo "${ca}Instalando...${cn}";
@@ -5011,6 +5026,28 @@ opcion47="1";
 ;;
 
 ##Opcion 88
+ardora)
+echo "${ca}Descargando...${cn}";
+sleep 1
+wget https://webardora.net/DownLoad/Ardora10_3L64.zip
+unzip Ardora10_3L64.zip -d /home/usuario/Ardora10/
+ 	echo "[Desktop Entry]" > /home/usuario/Escritorio/Ardora10.desktop
+	echo "Name=Pnsim">> /home/usuario/Escritorio/Ardora10.desktop
+	echo "Comment=">> /home/usuario/Escritorio/Ardora10.desktop
+	echo "Exec=wine /home/usuario/Ardora10/Ardora">> /home/usuario/Escritorio/Ardora10.desktop
+	echo "Icon= /home/usuario/Ardora10/imaxes/lapis.png*">> /home/usuario/Escritorio/Ardora10.desktop
+	echo "Terminal=false">> /home/usuario/Escritorio/Ardora10.desktop
+	echo "Type=Application">> /home/usuario/Escritorio/Ardora10.desktop
+	chmod 777 /home/usuario/Escritorio/Ardora10.desktop
+
+rm Ardora10_3L64.zip
+clear
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion47="1";
+;;
+
+##Opcion 88
 blue)
 Activar bluetooth
 echo "Instalando los paquetes necesarios...";
@@ -5594,6 +5631,7 @@ apt-get -y install s4a
 apt-get -qq update
 apt-get -y install calibre
 apt-get -y install pdfshuffler
+apt-get -y install lepton-eda
 
 ## DESARROLLO
 apt-get -y install bluefish
