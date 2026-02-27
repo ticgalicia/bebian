@@ -5035,7 +5035,7 @@ unzip Ardora10_3L64.zip -d /home/usuario/Ardora10/
 	echo "Name=Ardora10">> /home/usuario/Escritorio/Ardora10.desktop
 	echo "Comment=">> /home/usuario/Escritorio/Ardora10.desktop
 	echo "Exec= /home/usuario/Ardora10/Ardora">> /home/usuario/Escritorio/Ardora10.desktop
-	echo "Icon= /home/usuario/Ardora10/imaxes/lapis.png*">> /home/usuario/Escritorio/Ardora10.desktop
+	echo "Icon= /home/usuario/Ardora10/Imaxes/lapis.png*">> /home/usuario/Escritorio/Ardora10.desktop
 	echo "Terminal=false">> /home/usuario/Escritorio/Ardora10.desktop
 	echo "Type=Application">> /home/usuario/Escritorio/Ardora10.desktop
 	chmod 777 /home/usuario/Escritorio/Ardora10.desktop
