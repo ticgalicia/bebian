@@ -5805,7 +5805,7 @@ else
 	echo "${cr}Ya puedes ejecutar de nuevo el script.${cn}";
 fi
 clear
-echo "${cv}La ultima actualización ha incorporado una calculadora científica al sistema ... ${cn}";
+echo "${cv}Esta version ha incorporado a programacion la opcion 7c EchidnaML ... ${cn}";
 sleep 2
 # Marcando ultimo update
 echo "$DIA"> logsetup.log;
