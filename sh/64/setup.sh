@@ -711,7 +711,12 @@ then
 else
     echo "${cM}    [ ]${cn} 7b: Instalar Codium AI.(LLM)";
 fi
-echo
+if [ "$opcion7c" = "1" ]
+then
+    echo "${cv}    [x]${cn} 7c: Instalar EchidnaMl.(Scratch)${cn}";
+else
+    echo "${cM}    [ ]${cn} 7c: Instalar EchidnaMl.(Scratch)";
+fi
 echo
 echo "${cM}    INTRO: Menu 8 | \c";
 fi
@@ -3189,6 +3194,18 @@ sudo mkdir -p /usr/share/keyrings
 sudo wget -qO- https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo gpg --dearmor -o /usr/share/keyrings/vscodium-archive-keyring.gpg
 echo 'deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs vscodium main' | sudo tee /etc/apt/sources.list.d/vscodium.list
 sudo apt update && sudo apt install codium
+sleep 1
+echo "${ca}Hecho!${cn}";
+sleep 1
+opcion7b="1";
+;;
+
+7c)
+echo "${ca}Instalando...${cn}";
+sleep 1
+sudo wget -qO- https://github.com/EchidnaEducacion/echidnaml-releases/releases/download/v1.6.2/echidnaml_1.6.2_amd64.deb
+apt install ./echidnaml_1.6.2_amd64.deb
+rm echidnaml_1.6.2_amd64.deb
 sleep 1
 echo "${ca}Hecho!${cn}";
 sleep 1
