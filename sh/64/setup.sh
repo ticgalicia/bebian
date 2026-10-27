@@ -3203,7 +3203,7 @@ opcion7b="1";
 7c)
 echo "${ca}Instalando...${cn}";
 sleep 1
-sudo wget -qO- https://github.com/EchidnaEducacion/echidnaml-releases/releases/download/v1.6.2/echidnaml_1.6.2_amd64.deb
+sudo wget https://github.com/EchidnaEducacion/echidnaml-releases/releases/download/v1.6.2/echidnaml_1.6.2_amd64.deb
 apt install ./echidnaml_1.6.2_amd64.deb
 rm echidnaml_1.6.2_amd64.deb
 sleep 1
